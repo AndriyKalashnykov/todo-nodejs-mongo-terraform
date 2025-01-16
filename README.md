@@ -112,5 +112,5 @@ If you have any feature requests, issues, or areas for improvement, please [file
 
 ### Resources
 
-- [Original article](https://learn.microsoft.com/en-us/samples/azure-samples/todo-nodejs-mongo-terraform/todo-nodejs-mongo-terraform/)
-- [Original repo](https://github.com/azure-samples/todo-nodejs-mongo-terraform/tree/main/)
+* [Original article](https://learn.microsoft.com/en-us/samples/azure-samples/todo-nodejs-mongo-terraform/todo-nodejs-mongo-terraform/)
+* [Original repo](https://github.com/azure-samples/todo-nodejs-mongo-terraform/tree/main/)
