@@ -59,7 +59,6 @@ jobs:
       - name: Add az environment
         run: |
           azd env new ${{ vars.AZURE_ENV_NAME }}
-          azd env set ${{ vars.AZURE_ENV_NAME }}
 
       - name: Configure az environment
         run: |
