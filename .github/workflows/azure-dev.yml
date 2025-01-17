@@ -59,6 +59,7 @@ jobs:
       - name: Refresh azd env (pulls latest infrastructure provision)
         run: azd env refresh --no-prompt
         env:
+          AZURE_ENV_NAME: ${{ vars.AZURE_ENV_NAME }}
           AZURE_LOCATION: ${{ vars.AZURE_LOCATION }}
 
       - name: Provision Infrastructure
