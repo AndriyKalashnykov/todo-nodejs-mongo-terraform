@@ -58,8 +58,6 @@ jobs:
   
       - name: Add az environment
         run: |
-          $PWD
-          ls -al
           azd env new ${{ vars.AZURE_ENV_NAME }}
           azd env set ${{ vars.AZURE_ENV_NAME }}
 
