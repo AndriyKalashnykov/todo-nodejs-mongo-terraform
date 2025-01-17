@@ -55,32 +55,57 @@ jobs:
         shell: pwsh
         env:
           AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+  
+      - name: Add az environment
+        run: |
+          $PWD
+          ls -al
+          azd env new ${{ vars.AZURE_ENV_NAME }}
+          azd env set ${{ vars.AZURE_ENV_NAME }}
 
-      - name: Refresh azd env (pulls latest infrastructure provision)
-        run: azd env refresh --no-prompt
+      - name: Configure az environment
+        run: |
+          azd env set AZURE_ENV_NAME ${{ vars.AZURE_ENV_NAME }}
+          azd env set AZURE_LOCATION ${{ vars.AZURE_LOCATION }}
+          azd env set AZURE_SUBSCRIPTION_ID ${{ vars.AZURE_SUBSCRIPTION_ID }}
         env:
           AZURE_ENV_NAME: ${{ vars.AZURE_ENV_NAME }}
           AZURE_LOCATION: ${{ vars.AZURE_LOCATION }}
           AZURE_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
-        working-directory: /home/runner/work/todo-nodejs-mongo-terraform/todo-nodejs-mongo-terraform
 
-      - name: Provision Infrastructure
-        run: azd provision --no-prompt
+      - name: Provision and Deploy
+        run: |
+          azd up -e ${{ vars.AZURE_ENV_NAME }} --no-prompt
         env:
           AZURE_ENV_NAME: ${{ vars.AZURE_ENV_NAME }}
           AZURE_LOCATION: ${{ vars.AZURE_LOCATION }}
-          AZURE_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
-          ARM_TENANT_ID: ${{ vars.ARM_TENANT_ID }}
-          ARM_CLIENT_ID: ${{ vars.ARM_CLIENT_ID }}
-          ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
-          RS_RESOURCE_GROUP: ${{ vars.RS_RESOURCE_GROUP }}
-          RS_STORAGE_ACCOUNT: ${{ vars.RS_STORAGE_ACCOUNT }}
-          RS_CONTAINER_NAME: ${{ vars.RS_CONTAINER_NAME }}
-          AZD_INITIAL_ENVIRONMENT_CONFIG: ${{ secrets.AZD_INITIAL_ENVIRONMENT_CONFIG }}
+          AZURE_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}               
+
+      # - name: Refresh azd env (pulls latest infrastructure provision)
+      #   run: azd env refresh --no-prompt
+      #   env:
+      #     AZURE_ENV_NAME: ${{ vars.AZURE_ENV_NAME }}
+      #     AZURE_LOCATION: ${{ vars.AZURE_LOCATION }}
+      #     AZURE_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+      #   working-directory: /home/runner/work/todo-nodejs-mongo-terraform/todo-nodejs-mongo-terraform
+
+      # - name: Provision Infrastructure
+      #   run: azd provision --no-prompt
+      #   env:
+      #     AZURE_ENV_NAME: ${{ vars.AZURE_ENV_NAME }}
+      #     AZURE_LOCATION: ${{ vars.AZURE_LOCATION }}
+      #     AZURE_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+      #     ARM_TENANT_ID: ${{ vars.ARM_TENANT_ID }}
+      #     ARM_CLIENT_ID: ${{ vars.ARM_CLIENT_ID }}
+      #     ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+      #     RS_RESOURCE_GROUP: ${{ vars.RS_RESOURCE_GROUP }}
+      #     RS_STORAGE_ACCOUNT: ${{ vars.RS_STORAGE_ACCOUNT }}
+      #     RS_CONTAINER_NAME: ${{ vars.RS_CONTAINER_NAME }}
+      #     AZD_INITIAL_ENVIRONMENT_CONFIG: ${{ secrets.AZD_INITIAL_ENVIRONMENT_CONFIG }}
           
-      - name: Deploy Application
-        run: azd deploy --no-prompt
-        env:
-          AZURE_ENV_NAME: ${{ vars.AZURE_ENV_NAME }}
-          AZURE_LOCATION: ${{ vars.AZURE_LOCATION }}
-          AZURE_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+      # - name: Deploy Application
+      #   run: azd deploy --no-prompt
+      #   env:
+      #     AZURE_ENV_NAME: ${{ vars.AZURE_ENV_NAME }}
+      #     AZURE_LOCATION: ${{ vars.AZURE_LOCATION }}
+      #     AZURE_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}

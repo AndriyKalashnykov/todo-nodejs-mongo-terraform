@@ -57,6 +57,14 @@ azd init --template AndriyKalashnykov/todo-nodejs-mongo-terraform --no-prompt
 azd up
 ```
 
+### Test API
+
+```bash
+source <(azd env get-values)
+
+curl -X POST "$API_URI/api/Generate"
+```
+
 ### Application Architecture
 
 This application utilizes the following Azure resources:
