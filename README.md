@@ -67,6 +67,14 @@ azd up
 source <(azd env get-values)
 
 curl -X POST "$API_URI/api/Generate"
+
+az keyvault key delete --vault-name kv-n2m1njk5mwq3z --name 4ea92dfb-2091-40e3-ab1f-5b33097e1285
+
+az keyvault delete --name kv-n2m1njk5mwq3z
+az keyvault purge --name kv-n2m1njk5mwq3z
+
+az keyvault key list --vault-name kv-n2m1njk5mwq3z
+/subscriptions/d57e7e81-e648-45d6-83cc-b304be945e86/resourceGroups/rg-dev/providers/Microsoft.KeyVault/vaults/kv-n2m1njk5mwq3z/objectId/4ea92dfb-2091-40e3-ab1f-5b33097e1285
 ```
 
 ### Application Architecture
@@ -130,3 +138,7 @@ If you have any feature requests, issues, or areas for improvement, please [file
 * [Original article](https://learn.microsoft.com/en-us/samples/azure-samples/todo-nodejs-mongo-terraform/todo-nodejs-mongo-terraform/)
 * [Original repo](https://github.com/azure-samples/todo-nodejs-mongo-terraform/tree/main/)
 * [Use Terraform as an infrastructure as code tool for Azure Developer CLI](https://github.com/MicrosoftDocs/azure-dev-docs/blob/main/articles/azure-developer-cli/use-terraform-for-azd.md)
+* [Store Terraform state in Azure Storage](https://github.com/MicrosoftDocs/azure-dev-docs/blob/main/articles/terraform/store-state-in-azure-storage.md)
+* [Soft-delete will be enabled on all key vaults](https://docs.azure.cn/en-us/key-vault/general/soft-delete-change)
+* [How to set the value of an Azure KeyVault secret using curl](https://stackoverflow.com/questions/51440297/how-to-set-the-value-of-an-azure-keyvault-secret-using-curl)
+* [Manage Key Vault using the Azure CLI](https://learn.microsoft.com/en-us/azure/key-vault/general/manage-with-cli2)

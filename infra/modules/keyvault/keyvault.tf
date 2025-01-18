@@ -8,7 +8,17 @@ terraform {
       source  = "aztfmod/azurecaf"
       version = "~>1.2.24"
     }
+    random = {
+      source  = "hashicorp/random"
+      version = "~>3.5.1"
+    }
   }
+}
+
+# Azure CAF random seed
+resource "random_integer" "seed" {
+  min = 1
+  max = 500000
 }
 
 data "azurerm_client_config" "current" {}
@@ -18,7 +28,8 @@ data "azurerm_client_config" "current" {}
 resource "azurecaf_name" "kv_name" {
   name          = var.resource_token
   resource_type = "azurerm_key_vault"
-  random_length = 0
+  random_length = 5
+  random_seed   = random_integer.seed.result
   clean_input   = true
 }
 
@@ -27,6 +38,7 @@ resource "azurerm_key_vault" "kv" {
   location                 = var.location
   resource_group_name      = var.rg_name
   tenant_id                = data.azurerm_client_config.current.tenant_id
+  soft_delete_retention_days  = 7
   purge_protection_enabled = false
   sku_name                 = "standard"
 

@@ -15,7 +15,30 @@ permissions:
 # To configure required secrets for connecting to Azure, simply run `azd pipeline config --auth-type client-credentials`
 
 jobs:
+
   build:
+    
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Install Nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build api
+        run: cd src/ari && npm run build
+
+      - name: Build web
+        run: cd src/web && npm run build  
+
+  deploy:
+    if: github.ref_type == 'tag'
+    needs: [ build ]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
