@@ -5,13 +5,16 @@ terraform {
   required_version = ">= 1.1.7, < 2.0.0"
   required_providers {
     azurerm = {
-      version = "~>3.97.1"
       source  = "hashicorp/azurerm"
+      version = "~>3.97.1"
     }
     azurecaf = {
       source  = "aztfmod/azurecaf"
       version = "~>1.2.24"
     }
+  }
+
+  backend "azurerm" {
   }
 }
 
@@ -19,7 +22,7 @@ provider "azurerm" {
   skip_provider_registration = "true"
   features {
     key_vault {
-      purge_soft_delete_on_destroy = false
+      purge_soft_delete_on_destroy = true
     }
     resource_group {
       prevent_deletion_if_contains_resources = false

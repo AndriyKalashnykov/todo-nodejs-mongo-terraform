@@ -51,7 +51,11 @@ This quickstart will show you how to authenticate on Azure, initialize using a t
 azd auth login
 
 # First-time project setup. Initialize a project in the current directory, using this template. 
-azd init --template AndriyKalashnykov/todo-nodejs-mongo-terraform --no-prompt
+# azd init --template AndriyKalashnykov/todo-nodejs-mongo-terraform --no-prompt
+
+azd env set RS_RESOURCE_GROUP tfstate-rg
+azd env set RS_STORAGE_ACCOUNT tfstate29056
+azd env set RS_CONTAINER_NAME tfstate
 
 # Provision and deploy to Azure
 azd up
@@ -96,7 +100,10 @@ At this point, you have a complete application deployed on Azure. But there is m
 
 - [Run and Debug Locally](https://learn.microsoft.com/azure/developer/azure-developer-cli/debug?pivots=ide-vs-code) - using Visual Studio Code and the Azure Developer CLI extension
 
-- [`azd down`](https://learn.microsoft.com/azure/developer/azure-developer-cli/reference#azd-down) - to delete all the Azure resources created with this template 
+- [`azd down`](https://learn.microsoft.com/azure/developer/azure-developer-cli/reference#azd-down) - to delete all the Azure resources created with this template
+```bash
+azd down --force --purge
+```
 
 - [Enable optional features, like APIM](./OPTIONAL_FEATURES.md) - for enhanced backend API protection and observability
 
@@ -122,3 +129,4 @@ If you have any feature requests, issues, or areas for improvement, please [file
 
 * [Original article](https://learn.microsoft.com/en-us/samples/azure-samples/todo-nodejs-mongo-terraform/todo-nodejs-mongo-terraform/)
 * [Original repo](https://github.com/azure-samples/todo-nodejs-mongo-terraform/tree/main/)
+* [Use Terraform as an infrastructure as code tool for Azure Developer CLI](https://github.com/MicrosoftDocs/azure-dev-docs/blob/main/articles/azure-developer-cli/use-terraform-for-azd.md)
