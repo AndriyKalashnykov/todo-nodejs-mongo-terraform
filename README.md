@@ -1,24 +1,5 @@
----
-page_type: sample
-languages:
-- azdeveloper
-- nodejs
-- terraform
-- typescript
-- html
-products:
-- azure
-- azure-cosmos-db
-- azure-app-service
-- azure-monitor
-- azure-pipelines
-urlFragment: todo-nodejs-mongo-terraform
-name: React Web App with Node.js API and MongoDB (Terraform) on Azure
-description: A complete ToDo app on Azure App Service with Node.js API and Azure Cosmos API for MongoDB for storage. Uses Azure Developer CLI (azd) to build, deploy, and monitor
----
-<!-- YAML front-matter schema: https://review.learn.microsoft.com/en-us/help/contribute/samples/process/onboarding?branch=main#supported-metadata-fields-for-readmemd -->
-
 # React Web App with Node.js API and MongoDB (Terraform) on Azure
+>>>>>>> Tabnine >>>>>>>// {"conversationId":"68ff4b23-4e88-4bdd-8d59-1043886ca680","source":"instruct"}
 
 [![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=brightgreen&logo=github)](https://codespaces.new/azure-samples/todo-nodejs-mongo-terraform)
 [![Open in Dev Container](https://img.shields.io/static/v1?style=for-the-badge&label=Dev+Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/azure-samples/todo-nodejs-mongo-terraform)
