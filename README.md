@@ -142,3 +142,7 @@ If you have any feature requests, issues, or areas for improvement, please [file
 * [Soft-delete will be enabled on all key vaults](https://docs.azure.cn/en-us/key-vault/general/soft-delete-change)
 * [How to set the value of an Azure KeyVault secret using curl](https://stackoverflow.com/questions/51440297/how-to-set-the-value-of-an-azure-keyvault-secret-using-curl)
 * [Manage Key Vault using the Azure CLI](https://learn.microsoft.com/en-us/azure/key-vault/general/manage-with-cli2)
+* [Manage Azure Cosmos DB for NoSQL resources with terraform](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/manage-with-terraform)
+* [Quickstart: Deploy an Azure Cosmos DB to Azure Container Instances](https://learn.microsoft.com/en-us/azure/developer/terraform/azurerm/deploy-azure-cosmos-db-to-azure-container-instances)
+* [azurerm azurerm_cosmosdb_account 3.117.0](https://registry.terraform.io/providers/hashicorp/azurerm/3.117.0/docs/resources/cosmosdb_account#primary_mongodb_connection_string-1)
+* [azurerm azurerm_cosmosdb_account 4.16.0](https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cosmosdb_account)
