@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     azurerm = {
-      version = "~> 4.16.0"
+      version = "~> 3.117.0"
       source  = "hashicorp/azurerm"
     }
     azurecaf = {
@@ -26,8 +26,8 @@ resource "azurerm_cosmosdb_account" "db" {
   resource_group_name             = var.rg_name
   offer_type                      = "Standard"
   kind                            = "MongoDB"
-  enable_automatic_failover       = false
-  enable_multiple_write_locations = false
+  # enable_automatic_failover       = false
+  # enable_multiple_write_locations = false
   mongo_server_version            = "4.0"
   tags                            = var.tags
 

@@ -6,7 +6,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~> 4.16.0"
+      version = "~> 3.117.0"
     }
     azurecaf = {
       source  = "aztfmod/azurecaf"
@@ -19,7 +19,7 @@ terraform {
 }
 
 provider "azurerm" {
-  skip_provider_registration = "true"
+  # skip_provider_registration = "true"
   features {
     key_vault {
       purge_soft_delete_on_destroy = true
