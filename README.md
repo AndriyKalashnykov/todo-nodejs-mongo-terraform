@@ -33,6 +33,24 @@ azd auth login
 # First-time project setup. Initialize a project in the current directory, using this template. 
 # azd init --template AndriyKalashnykov/todo-nodejs-mongo-terraform --no-prompt
 
+#
+# Configure remote state storage account - https://github.com/MicrosoftDocs/azure-dev-docs/blob/main/articles/terraform/store-state-in-azure-storage.md#azure-cli
+#
+#!/bin/bash
+
+# RESOURCE_GROUP_NAME=tfstate
+# STORAGE_ACCOUNT_NAME=tfstate$RANDOM
+# CONTAINER_NAME=tfstate
+
+# # Create resource group
+# az group create --name $RESOURCE_GROUP_NAME --location eastus
+
+# # Create storage account
+# az storage account create --resource-group $RESOURCE_GROUP_NAME --name $STORAGE_ACCOUNT_NAME --sku Standard_LRS --encryption-services blob
+
+# # Create blob container
+# az storage container create --name $CONTAINER_NAME --account-name $STORAGE_ACCOUNT_NAME
+
 azd env set RS_RESOURCE_GROUP tfstate-rg
 azd env set RS_STORAGE_ACCOUNT tfstate29056
 azd env set RS_CONTAINER_NAME tfstate
@@ -41,12 +59,12 @@ azd env set RS_CONTAINER_NAME tfstate
 azd up
 ```
 
-### Test API
+### Use APIs
 
 ```bash
 source <(azd env get-values)
 
-curl -X POST "$API_URI/api/Generate"
+curl -X POST "$API_URI/api/GenerateAPIx"
 
 az keyvault key delete --vault-name kv-n2m1njk5mwq3z --name 4ea92dfb-2091-40e3-ab1f-5b33097e1285
 
