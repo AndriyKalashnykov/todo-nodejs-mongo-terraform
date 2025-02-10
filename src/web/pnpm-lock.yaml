@@ -14,6 +14,9 @@ importers:
       '@fluentui/react':
         specifier: ^8.122.9
         version: 8.122.9(@types/react-dom@18.3.5(@types/react@18.3.18))(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@microsoft/applicationinsights-common':
+        specifier: ^3.3.5
+        version: 3.3.5(tslib@2.8.1)
       '@microsoft/applicationinsights-react-js':
         specifier: ^17.3.5
         version: 17.3.5(history@5.3.0)(react@18.3.1)(tslib@2.8.1)
@@ -35,11 +38,14 @@ importers:
       react-dom:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
+      react-router:
+        specifier: ^7.1.5
+        version: 7.1.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-router-dom:
         specifier: ^7.1.5
         version: 7.1.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       web-vitals:
-        specifier: ^4.0.0
+        specifier: ^4.2.4
         version: 4.2.4
     devDependencies:
       '@types/react':

@@ -12,6 +12,7 @@
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@fluentui/react": "^8.122.9",
+    "@microsoft/applicationinsights-common": "^3.3.5",
     "@microsoft/applicationinsights-react-js": "^17.3.5",
     "@microsoft/applicationinsights-web": "^3.3.5",
     "axios": "^1.7.9",
@@ -19,8 +20,9 @@
     "history": "^5.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router": "^7.1.5",
     "react-router-dom": "^7.1.5",
-    "web-vitals": "^4.0.0"
+    "web-vitals": "^4.2.4"
   },
   "devDependencies": {
     "@types/react": "^18.3.18",
