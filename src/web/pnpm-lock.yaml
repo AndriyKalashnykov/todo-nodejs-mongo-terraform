@@ -13,7 +13,7 @@ importers:
         version: 7.21.11(@babel/core@7.26.8)
       '@fluentui/react':
         specifier: ^8.122.9
-        version: 8.122.19(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        version: 8.122.19(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@microsoft/applicationinsights-common':
         specifier: ^3.3.5
         version: 3.3.9(tslib@2.8.1)
@@ -49,11 +49,11 @@ importers:
         version: 4.2.4
     devDependencies:
       '@types/react':
-        specifier: 19.1.12
-        version: 19.1.12
+        specifier: 19.1.13
+        version: 19.1.13
       '@types/react-dom':
         specifier: 19.1.9
-        version: 19.1.9(@types/react@19.1.12)
+        version: 19.1.9(@types/react@19.1.13)
       '@typescript-eslint/eslint-plugin':
         specifier: 6.21.0
         version: 6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.9.2))(eslint@8.57.1)(typescript@5.9.2)
@@ -774,8 +774,8 @@ packages:
     peerDependencies:
       '@types/react': ^19.0.0
 
-  '@types/react@19.1.12':
-    resolution: {integrity: sha512-cMoR+FoAf/Jyq6+Df2/Z41jISvGZZ2eTlnsaJRptmZ76Caldwy1odD4xTr/gNV9VLj0AWgg/nmkevIyUfIIq5w==}
+  '@types/react@19.1.13':
+    resolution: {integrity: sha512-hHkbU/eoO3EG5/MZkuFSKmYqPbSVk5byPFa3e7y/8TybHiLMACgI8seVYlicwk7H5K/rI2px9xrQp/C+AUDTiQ==}
 
   '@types/semver@7.5.8':
     resolution: {integrity: sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==}
@@ -1821,23 +1821,23 @@ snapshots:
       '@fluentui/set-version': 8.2.24
       tslib: 2.8.1
 
-  '@fluentui/font-icons-mdl2@8.5.63(@types/react@19.1.12)(react@19.0.0)':
+  '@fluentui/font-icons-mdl2@8.5.63(@types/react@19.1.13)(react@19.0.0)':
     dependencies:
       '@fluentui/set-version': 8.2.24
-      '@fluentui/style-utilities': 8.12.4(@types/react@19.1.12)(react@19.0.0)
-      '@fluentui/utilities': 8.15.23(@types/react@19.1.12)(react@19.0.0)
+      '@fluentui/style-utilities': 8.12.4(@types/react@19.1.13)(react@19.0.0)
+      '@fluentui/utilities': 8.15.23(@types/react@19.1.13)(react@19.0.0)
       tslib: 2.8.1
     transitivePeerDependencies:
       - '@types/react'
       - react
 
-  '@fluentui/foundation-legacy@8.4.30(@types/react@19.1.12)(react@19.0.0)':
+  '@fluentui/foundation-legacy@8.4.30(@types/react@19.1.13)(react@19.0.0)':
     dependencies:
       '@fluentui/merge-styles': 8.6.14
       '@fluentui/set-version': 8.2.24
-      '@fluentui/style-utilities': 8.12.4(@types/react@19.1.12)(react@19.0.0)
-      '@fluentui/utilities': 8.15.23(@types/react@19.1.12)(react@19.0.0)
-      '@types/react': 19.1.12
+      '@fluentui/style-utilities': 8.12.4(@types/react@19.1.13)(react@19.0.0)
+      '@fluentui/utilities': 8.15.23(@types/react@19.1.13)(react@19.0.0)
+      '@types/react': 19.1.13
       react: 19.0.0
       tslib: 2.8.1
 
@@ -1850,56 +1850,56 @@ snapshots:
       '@fluentui/set-version': 8.2.24
       tslib: 2.8.1
 
-  '@fluentui/react-focus@8.9.26(@types/react@19.1.12)(react@19.0.0)':
+  '@fluentui/react-focus@8.9.26(@types/react@19.1.13)(react@19.0.0)':
     dependencies:
       '@fluentui/keyboard-key': 0.4.23
       '@fluentui/merge-styles': 8.6.14
       '@fluentui/set-version': 8.2.24
-      '@fluentui/style-utilities': 8.12.4(@types/react@19.1.12)(react@19.0.0)
-      '@fluentui/utilities': 8.15.23(@types/react@19.1.12)(react@19.0.0)
-      '@types/react': 19.1.12
+      '@fluentui/style-utilities': 8.12.4(@types/react@19.1.13)(react@19.0.0)
+      '@fluentui/utilities': 8.15.23(@types/react@19.1.13)(react@19.0.0)
+      '@types/react': 19.1.13
       react: 19.0.0
       tslib: 2.8.1
 
-  '@fluentui/react-hooks@8.8.19(@types/react@19.1.12)(react@19.0.0)':
+  '@fluentui/react-hooks@8.8.19(@types/react@19.1.13)(react@19.0.0)':
     dependencies:
-      '@fluentui/react-window-provider': 2.2.30(@types/react@19.1.12)(react@19.0.0)
+      '@fluentui/react-window-provider': 2.2.30(@types/react@19.1.13)(react@19.0.0)
       '@fluentui/set-version': 8.2.24
-      '@fluentui/utilities': 8.15.23(@types/react@19.1.12)(react@19.0.0)
-      '@types/react': 19.1.12
+      '@fluentui/utilities': 8.15.23(@types/react@19.1.13)(react@19.0.0)
+      '@types/react': 19.1.13
       react: 19.0.0
       tslib: 2.8.1
 
-  '@fluentui/react-portal-compat-context@9.0.14(@types/react@19.1.12)(react@19.0.0)':
+  '@fluentui/react-portal-compat-context@9.0.14(@types/react@19.1.13)(react@19.0.0)':
     dependencies:
       '@swc/helpers': 0.5.17
-      '@types/react': 19.1.12
+      '@types/react': 19.1.13
       react: 19.0.0
 
-  '@fluentui/react-window-provider@2.2.30(@types/react@19.1.12)(react@19.0.0)':
+  '@fluentui/react-window-provider@2.2.30(@types/react@19.1.13)(react@19.0.0)':
     dependencies:
       '@fluentui/set-version': 8.2.24
-      '@types/react': 19.1.12
+      '@types/react': 19.1.13
       react: 19.0.0
       tslib: 2.8.1
 
-  '@fluentui/react@8.122.19(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@fluentui/react@8.122.19(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@fluentui/date-time-utilities': 8.6.10
-      '@fluentui/font-icons-mdl2': 8.5.63(@types/react@19.1.12)(react@19.0.0)
-      '@fluentui/foundation-legacy': 8.4.30(@types/react@19.1.12)(react@19.0.0)
+      '@fluentui/font-icons-mdl2': 8.5.63(@types/react@19.1.13)(react@19.0.0)
+      '@fluentui/foundation-legacy': 8.4.30(@types/react@19.1.13)(react@19.0.0)
       '@fluentui/merge-styles': 8.6.14
-      '@fluentui/react-focus': 8.9.26(@types/react@19.1.12)(react@19.0.0)
-      '@fluentui/react-hooks': 8.8.19(@types/react@19.1.12)(react@19.0.0)
-      '@fluentui/react-portal-compat-context': 9.0.14(@types/react@19.1.12)(react@19.0.0)
-      '@fluentui/react-window-provider': 2.2.30(@types/react@19.1.12)(react@19.0.0)
+      '@fluentui/react-focus': 8.9.26(@types/react@19.1.13)(react@19.0.0)
+      '@fluentui/react-hooks': 8.8.19(@types/react@19.1.13)(react@19.0.0)
+      '@fluentui/react-portal-compat-context': 9.0.14(@types/react@19.1.13)(react@19.0.0)
+      '@fluentui/react-window-provider': 2.2.30(@types/react@19.1.13)(react@19.0.0)
       '@fluentui/set-version': 8.2.24
-      '@fluentui/style-utilities': 8.12.4(@types/react@19.1.12)(react@19.0.0)
-      '@fluentui/theme': 2.6.67(@types/react@19.1.12)(react@19.0.0)
-      '@fluentui/utilities': 8.15.23(@types/react@19.1.12)(react@19.0.0)
+      '@fluentui/style-utilities': 8.12.4(@types/react@19.1.13)(react@19.0.0)
+      '@fluentui/theme': 2.6.67(@types/react@19.1.13)(react@19.0.0)
+      '@fluentui/utilities': 8.15.23(@types/react@19.1.13)(react@19.0.0)
       '@microsoft/load-themed-styles': 1.10.295
-      '@types/react': 19.1.12
-      '@types/react-dom': 19.1.9(@types/react@19.1.12)
+      '@types/react': 19.1.13
+      '@types/react-dom': 19.1.9(@types/react@19.1.13)
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
       tslib: 2.8.1
@@ -1908,34 +1908,34 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@fluentui/style-utilities@8.12.4(@types/react@19.1.12)(react@19.0.0)':
+  '@fluentui/style-utilities@8.12.4(@types/react@19.1.13)(react@19.0.0)':
     dependencies:
       '@fluentui/merge-styles': 8.6.14
       '@fluentui/set-version': 8.2.24
-      '@fluentui/theme': 2.6.67(@types/react@19.1.12)(react@19.0.0)
-      '@fluentui/utilities': 8.15.23(@types/react@19.1.12)(react@19.0.0)
+      '@fluentui/theme': 2.6.67(@types/react@19.1.13)(react@19.0.0)
+      '@fluentui/utilities': 8.15.23(@types/react@19.1.13)(react@19.0.0)
       '@microsoft/load-themed-styles': 1.10.295
       tslib: 2.8.1
     transitivePeerDependencies:
       - '@types/react'
       - react
 
-  '@fluentui/theme@2.6.67(@types/react@19.1.12)(react@19.0.0)':
+  '@fluentui/theme@2.6.67(@types/react@19.1.13)(react@19.0.0)':
     dependencies:
       '@fluentui/merge-styles': 8.6.14
       '@fluentui/set-version': 8.2.24
-      '@fluentui/utilities': 8.15.23(@types/react@19.1.12)(react@19.0.0)
-      '@types/react': 19.1.12
+      '@fluentui/utilities': 8.15.23(@types/react@19.1.13)(react@19.0.0)
+      '@types/react': 19.1.13
       react: 19.0.0
       tslib: 2.8.1
 
-  '@fluentui/utilities@8.15.23(@types/react@19.1.12)(react@19.0.0)':
+  '@fluentui/utilities@8.15.23(@types/react@19.1.13)(react@19.0.0)':
     dependencies:
       '@fluentui/dom-utilities': 2.3.10
       '@fluentui/merge-styles': 8.6.14
-      '@fluentui/react-window-provider': 2.2.30(@types/react@19.1.12)(react@19.0.0)
+      '@fluentui/react-window-provider': 2.2.30(@types/react@19.1.13)(react@19.0.0)
       '@fluentui/set-version': 8.2.24
-      '@types/react': 19.1.12
+      '@types/react': 19.1.13
       react: 19.0.0
       tslib: 2.8.1
 
@@ -2218,11 +2218,11 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/react-dom@19.1.9(@types/react@19.1.12)':
+  '@types/react-dom@19.1.9(@types/react@19.1.13)':
     dependencies:
-      '@types/react': 19.1.12
+      '@types/react': 19.1.13
 
-  '@types/react@19.1.12':
+  '@types/react@19.1.13':
     dependencies:
       csstype: 3.1.3
 
