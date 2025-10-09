@@ -13,7 +13,7 @@ importers:
         version: 7.21.11(@babel/core@7.26.8)
       '@fluentui/react':
         specifier: ^8.122.9
-        version: 8.122.19(@types/react-dom@19.2.1(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        version: 8.124.0(@types/react-dom@19.2.1(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@microsoft/applicationinsights-common':
         specifier: ^3.3.5
         version: 3.3.10(tslib@2.8.1)
@@ -414,11 +414,11 @@ packages:
   '@fluentui/dom-utilities@2.3.10':
     resolution: {integrity: sha512-6WDImiLqTOpkEtfUKSStcTDpzmJfL6ZammomcjawN9xH/8u8G3Hx72CIt2MNck9giw/oUlNLJFdWRAjeP3rmPQ==}
 
-  '@fluentui/font-icons-mdl2@8.5.63':
-    resolution: {integrity: sha512-aSwI7GiIICvzrzok8xV082U1U8oieyjELUFjyocC12/WoAYUdLJAk3L4nh4o4WaFgpfHmbtBul7GIeJBDQxaHA==}
+  '@fluentui/font-icons-mdl2@8.5.64':
+    resolution: {integrity: sha512-aiGPNWdOHM5WOugyF9KNNqGSA/9sdT+B9+JYmdR1lGzNJtn6hxhbiwXCjerKh+JFp7WXtIetgBHQbz2TKIa4Kw==}
 
-  '@fluentui/foundation-legacy@8.4.30':
-    resolution: {integrity: sha512-BQv7CqILjI+xKMZOOrs01EnuMeRBecmDRze2ThuxB8vZx+xTmBgDlrRIHnWDFIqfC6dMvNCnBwu6ubgiPk8ybQ==}
+  '@fluentui/foundation-legacy@8.5.0':
+    resolution: {integrity: sha512-YEpoT+KsWCfWhyLVJkgmyIc/Siip5V3XNZXbHIIOfeI1v3CzONoNV8ofsgJxLbJv2HleeH4qMKf9W7NQfrxQ/A==}
     peerDependencies:
       '@types/react': '>=16.8.0 <19.0.0'
       react: '>=16.8.0 <19.0.0'
@@ -429,14 +429,14 @@ packages:
   '@fluentui/merge-styles@8.6.14':
     resolution: {integrity: sha512-vghuHFAfQgS9WLIIs4kgDOCh/DHd5vGIddP4/bzposhlAVLZR6wUBqldm9AuCdY88r5LyCRMavVJLV+Up3xdvA==}
 
-  '@fluentui/react-focus@8.9.26':
-    resolution: {integrity: sha512-mbFsdCSSgpxTxw3dCIek7hmTubxJZT4+7uFRZOo0abKKCn6rWGcQWpiLT9ndJrD6I5TtEzJaw68WEk7kvFYyAw==}
+  '@fluentui/react-focus@8.9.27':
+    resolution: {integrity: sha512-DD+C41Ttr7S6OFrJ0/hjMdE+TD5Ue9UvmlTVO4tDRuZeZm1o8339v/i493a4eXb/+zdlygs2ZJPyxy0BPAgXDg==}
     peerDependencies:
       '@types/react': '>=16.8.0 <19.0.0'
       react: '>=16.8.0 <19.0.0'
 
-  '@fluentui/react-hooks@8.8.19':
-    resolution: {integrity: sha512-uXcETVTl2L0G/Ocyb2Rjym96tcJd2NaZ2Hqt6EJcBb9KJD9irNeXjCCxsRNPC5kBDbfrQML2aai+M2kU9lZKNQ==}
+  '@fluentui/react-hooks@8.9.0':
+    resolution: {integrity: sha512-2Yw45+HNqy9+s21XvrkaAxL+SCy9u0lbM3vC5Jn+sjLbXQ/XKijLdwIFZn+juVfmQr5NKQIboipBRbhos6sFPQ==}
     peerDependencies:
       '@types/react': '>=16.8.0 <19.0.0'
       react: '>=16.8.0 <19.0.0'
@@ -453,8 +453,8 @@ packages:
       '@types/react': '>=16.8.0 <19.0.0'
       react: '>=16.8.0 <19.0.0'
 
-  '@fluentui/react@8.122.19':
-    resolution: {integrity: sha512-rByJWwm4g21cehJLZsrsuQWpLLiVQmnjlfxNXRrbokadaWlBlBR4+8+xzmcyr+lbEmCjL8z9zHcZa7VlOKl/uA==}
+  '@fluentui/react@8.124.0':
+    resolution: {integrity: sha512-3/VOFfLZgwNW60QtI7M6w2QKuu45PzkPyKA+6SYbL3bZiTonfcUKwOCysPpBmaCfdrDy7USctw36hnx35LQi9g==}
     peerDependencies:
       '@types/react': '>=16.8.0 <19.0.0'
       '@types/react-dom': '>=16.8.0 <19.0.0'
@@ -464,17 +464,17 @@ packages:
   '@fluentui/set-version@8.2.24':
     resolution: {integrity: sha512-8uNi2ThvNgF+6d3q2luFVVdk/wZV0AbRfJ85kkvf2+oSRY+f6QVK0w13vMorNhA5puumKcZniZoAfUF02w7NSg==}
 
-  '@fluentui/style-utilities@8.12.4':
-    resolution: {integrity: sha512-s+u9v5gQ1SMLsuI7pUP2rXo6Kd2v+X2l4eKQxKO4UO0dZv/kLaA4fnmkXaIDpKkLS+eI9KBAG/W2KhojwBSt1g==}
+  '@fluentui/style-utilities@8.13.0':
+    resolution: {integrity: sha512-91cxKXIgvNnh5cyqrNUXRtvO7OfmzmLmZJnPz9yYCFJJteYlWPst6iRffuuTL6+LN6eRi55qbgU6SLzjvDwdcw==}
 
-  '@fluentui/theme@2.6.67':
-    resolution: {integrity: sha512-+9+VkIkZ+NCQDXFP6+WV2ChAj/KHphOEDCvGO15w8ql7sqRxeRQACtoWYNq1tAAsodbnq/amCfo2PNy2VIcIOQ==}
+  '@fluentui/theme@2.6.68':
+    resolution: {integrity: sha512-rhCCVNaYl/RHeJzdFwskuxikxVo6YtaS5lGxoZUzQ7QSFm6wFpAqVyqOfgTTEKKtYWs4Sxko0ennJPw5Vil2iQ==}
     peerDependencies:
       '@types/react': '>=16.8.0 <19.0.0'
       react: '>=16.8.0 <19.0.0'
 
-  '@fluentui/utilities@8.15.23':
-    resolution: {integrity: sha512-Vrto/daJ8lhwAZqf5XkC3qi+4PW8Dk2X0yXNgia9aV2wxsbMoEikqC08cNQnapTaBLkurAIShTbR56mxKh8Kyw==}
+  '@fluentui/utilities@8.16.0':
+    resolution: {integrity: sha512-V8ZUYNhkUKjic5nxn8UeDnSxp3nJOY3rN3+Xszc/pGCSC2JW8DWfmtHV2lXOeyG3qnqOAfyeeysRopSnjEKoxw==}
     peerDependencies:
       '@types/react': '>=16.8.0 <19.0.0'
       react: '>=16.8.0 <19.0.0'
@@ -1915,22 +1915,22 @@ snapshots:
       '@fluentui/set-version': 8.2.24
       tslib: 2.8.1
 
-  '@fluentui/font-icons-mdl2@8.5.63(@types/react@19.2.2)(react@19.2.0)':
+  '@fluentui/font-icons-mdl2@8.5.64(@types/react@19.2.2)(react@19.2.0)':
     dependencies:
       '@fluentui/set-version': 8.2.24
-      '@fluentui/style-utilities': 8.12.4(@types/react@19.2.2)(react@19.2.0)
-      '@fluentui/utilities': 8.15.23(@types/react@19.2.2)(react@19.2.0)
+      '@fluentui/style-utilities': 8.13.0(@types/react@19.2.2)(react@19.2.0)
+      '@fluentui/utilities': 8.16.0(@types/react@19.2.2)(react@19.2.0)
       tslib: 2.8.1
     transitivePeerDependencies:
       - '@types/react'
       - react
 
-  '@fluentui/foundation-legacy@8.4.30(@types/react@19.2.2)(react@19.2.0)':
+  '@fluentui/foundation-legacy@8.5.0(@types/react@19.2.2)(react@19.2.0)':
     dependencies:
       '@fluentui/merge-styles': 8.6.14
       '@fluentui/set-version': 8.2.24
-      '@fluentui/style-utilities': 8.12.4(@types/react@19.2.2)(react@19.2.0)
-      '@fluentui/utilities': 8.15.23(@types/react@19.2.2)(react@19.2.0)
+      '@fluentui/style-utilities': 8.13.0(@types/react@19.2.2)(react@19.2.0)
+      '@fluentui/utilities': 8.16.0(@types/react@19.2.2)(react@19.2.0)
       '@types/react': 19.2.2
       react: 19.2.0
       tslib: 2.8.1
@@ -1944,22 +1944,22 @@ snapshots:
       '@fluentui/set-version': 8.2.24
       tslib: 2.8.1
 
-  '@fluentui/react-focus@8.9.26(@types/react@19.2.2)(react@19.2.0)':
+  '@fluentui/react-focus@8.9.27(@types/react@19.2.2)(react@19.2.0)':
     dependencies:
       '@fluentui/keyboard-key': 0.4.23
       '@fluentui/merge-styles': 8.6.14
       '@fluentui/set-version': 8.2.24
-      '@fluentui/style-utilities': 8.12.4(@types/react@19.2.2)(react@19.2.0)
-      '@fluentui/utilities': 8.15.23(@types/react@19.2.2)(react@19.2.0)
+      '@fluentui/style-utilities': 8.13.0(@types/react@19.2.2)(react@19.2.0)
+      '@fluentui/utilities': 8.16.0(@types/react@19.2.2)(react@19.2.0)
       '@types/react': 19.2.2
       react: 19.2.0
       tslib: 2.8.1
 
-  '@fluentui/react-hooks@8.8.19(@types/react@19.2.2)(react@19.2.0)':
+  '@fluentui/react-hooks@8.9.0(@types/react@19.2.2)(react@19.2.0)':
     dependencies:
       '@fluentui/react-window-provider': 2.2.30(@types/react@19.2.2)(react@19.2.0)
       '@fluentui/set-version': 8.2.24
-      '@fluentui/utilities': 8.15.23(@types/react@19.2.2)(react@19.2.0)
+      '@fluentui/utilities': 8.16.0(@types/react@19.2.2)(react@19.2.0)
       '@types/react': 19.2.2
       react: 19.2.0
       tslib: 2.8.1
@@ -1977,20 +1977,20 @@ snapshots:
       react: 19.2.0
       tslib: 2.8.1
 
-  '@fluentui/react@8.122.19(@types/react-dom@19.2.1(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
+  '@fluentui/react@8.124.0(@types/react-dom@19.2.1(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
     dependencies:
       '@fluentui/date-time-utilities': 8.6.10
-      '@fluentui/font-icons-mdl2': 8.5.63(@types/react@19.2.2)(react@19.2.0)
-      '@fluentui/foundation-legacy': 8.4.30(@types/react@19.2.2)(react@19.2.0)
+      '@fluentui/font-icons-mdl2': 8.5.64(@types/react@19.2.2)(react@19.2.0)
+      '@fluentui/foundation-legacy': 8.5.0(@types/react@19.2.2)(react@19.2.0)
       '@fluentui/merge-styles': 8.6.14
-      '@fluentui/react-focus': 8.9.26(@types/react@19.2.2)(react@19.2.0)
-      '@fluentui/react-hooks': 8.8.19(@types/react@19.2.2)(react@19.2.0)
+      '@fluentui/react-focus': 8.9.27(@types/react@19.2.2)(react@19.2.0)
+      '@fluentui/react-hooks': 8.9.0(@types/react@19.2.2)(react@19.2.0)
       '@fluentui/react-portal-compat-context': 9.0.15(@types/react@19.2.2)(react@19.2.0)
       '@fluentui/react-window-provider': 2.2.30(@types/react@19.2.2)(react@19.2.0)
       '@fluentui/set-version': 8.2.24
-      '@fluentui/style-utilities': 8.12.4(@types/react@19.2.2)(react@19.2.0)
-      '@fluentui/theme': 2.6.67(@types/react@19.2.2)(react@19.2.0)
-      '@fluentui/utilities': 8.15.23(@types/react@19.2.2)(react@19.2.0)
+      '@fluentui/style-utilities': 8.13.0(@types/react@19.2.2)(react@19.2.0)
+      '@fluentui/theme': 2.6.68(@types/react@19.2.2)(react@19.2.0)
+      '@fluentui/utilities': 8.16.0(@types/react@19.2.2)(react@19.2.0)
       '@microsoft/load-themed-styles': 1.10.295
       '@types/react': 19.2.2
       '@types/react-dom': 19.2.1(@types/react@19.2.2)
@@ -2002,28 +2002,28 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@fluentui/style-utilities@8.12.4(@types/react@19.2.2)(react@19.2.0)':
+  '@fluentui/style-utilities@8.13.0(@types/react@19.2.2)(react@19.2.0)':
     dependencies:
       '@fluentui/merge-styles': 8.6.14
       '@fluentui/set-version': 8.2.24
-      '@fluentui/theme': 2.6.67(@types/react@19.2.2)(react@19.2.0)
-      '@fluentui/utilities': 8.15.23(@types/react@19.2.2)(react@19.2.0)
+      '@fluentui/theme': 2.6.68(@types/react@19.2.2)(react@19.2.0)
+      '@fluentui/utilities': 8.16.0(@types/react@19.2.2)(react@19.2.0)
       '@microsoft/load-themed-styles': 1.10.295
       tslib: 2.8.1
     transitivePeerDependencies:
       - '@types/react'
       - react
 
-  '@fluentui/theme@2.6.67(@types/react@19.2.2)(react@19.2.0)':
+  '@fluentui/theme@2.6.68(@types/react@19.2.2)(react@19.2.0)':
     dependencies:
       '@fluentui/merge-styles': 8.6.14
       '@fluentui/set-version': 8.2.24
-      '@fluentui/utilities': 8.15.23(@types/react@19.2.2)(react@19.2.0)
+      '@fluentui/utilities': 8.16.0(@types/react@19.2.2)(react@19.2.0)
       '@types/react': 19.2.2
       react: 19.2.0
       tslib: 2.8.1
 
-  '@fluentui/utilities@8.15.23(@types/react@19.2.2)(react@19.2.0)':
+  '@fluentui/utilities@8.16.0(@types/react@19.2.2)(react@19.2.0)':
     dependencies:
       '@fluentui/dom-utilities': 2.3.10
       '@fluentui/merge-styles': 8.6.14
