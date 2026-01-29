@@ -16,13 +16,13 @@ importers:
         version: 8.122.19(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.1.5(react@19.1.5))(react@19.1.5)
       '@microsoft/applicationinsights-common':
         specifier: ^3.3.5
-        version: 3.3.10(tslib@2.8.1)
+        version: 3.3.11(tslib@2.8.1)
       '@microsoft/applicationinsights-react-js':
         specifier: ^17.3.5
         version: 17.3.6(history@5.3.0)(react@19.1.5)(tslib@2.8.1)
       '@microsoft/applicationinsights-web':
         specifier: ^3.3.5
-        version: 3.3.10(tslib@2.8.1)
+        version: 3.3.11(tslib@2.8.1)
       axios:
         specifier: ^1.7.9
         version: 1.12.2
@@ -62,7 +62,7 @@ importers:
         version: 6.21.0(eslint@8.57.1)(typescript@5.9.3)
       '@vitejs/plugin-react-swc':
         specifier: 3.11.0
-        version: 3.11.0(@swc/helpers@0.5.17)(vite@6.3.6)
+        version: 3.11.0(@swc/helpers@0.5.18)(vite@6.3.6)
       eslint:
         specifier: 8.57.1
         version: 8.57.1
@@ -70,8 +70,8 @@ importers:
         specifier: 5.2.0
         version: 5.2.0(eslint@8.57.1)
       eslint-plugin-react-refresh:
-        specifier: 0.4.24
-        version: 0.4.24(eslint@8.57.1)
+        specifier: 0.4.26
+        version: 0.4.26(eslint@8.57.1)
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -414,11 +414,11 @@ packages:
   '@fluentui/dom-utilities@2.3.10':
     resolution: {integrity: sha512-6WDImiLqTOpkEtfUKSStcTDpzmJfL6ZammomcjawN9xH/8u8G3Hx72CIt2MNck9giw/oUlNLJFdWRAjeP3rmPQ==}
 
-  '@fluentui/font-icons-mdl2@8.5.70':
-    resolution: {integrity: sha512-anTR0w3EC5kWPJr770yc3lmaynml+dZ814xdgkgzRpRmf0zC3WOwdyp64c/9ilvr3zoTqXCNwQO6VeOGoNUcOw==}
+  '@fluentui/font-icons-mdl2@8.5.71':
+    resolution: {integrity: sha512-pCJyPl5TCFW4ZW3Qcphttc8OBPkhDpK70yQRYk9NugeS+FhlSPcgIbwGefBcu9G+8KYbfdZno8xMyr9pg+F6Mg==}
 
-  '@fluentui/foundation-legacy@8.6.3':
-    resolution: {integrity: sha512-pFjmpY961J5XtdfrhzBuF3FEZBjOdskrTIWJN6At/govltvMkhCbdwIleAkoyLyt0GrK0HudOb1BsdORd6gSrA==}
+  '@fluentui/foundation-legacy@8.6.4':
+    resolution: {integrity: sha512-HyVJ9yv+B0PbQPnU47VVBRLdVvwGQyf7gpl6IRDrzou39Fbq23PFjFBHmuQRw6zBo1YMZAUeLr/vJz13Bd7yew==}
     peerDependencies:
       '@types/react': '>=16.8.0 <20.0.0'
       react: '>=16.8.0 <20.0.0'
@@ -429,8 +429,8 @@ packages:
   '@fluentui/merge-styles@8.6.14':
     resolution: {integrity: sha512-vghuHFAfQgS9WLIIs4kgDOCh/DHd5vGIddP4/bzposhlAVLZR6wUBqldm9AuCdY88r5LyCRMavVJLV+Up3xdvA==}
 
-  '@fluentui/react-focus@8.10.3':
-    resolution: {integrity: sha512-YiY/ljQo4mku3P50y+wQ7ezdQ5QnxsJ4xr3b4RD4w21faH+zrdw0N2zxgeGccBs2Nd9viJCeCTJxhc2bVkhDAQ==}
+  '@fluentui/react-focus@8.10.4':
+    resolution: {integrity: sha512-k5FfTJ5psg4xN/52X4AzJ38qh3Oh2C29KL5pA3fVY34QkJAHgxeETe9JzjTeh/s8i5SLXvf1Uh+FjERZTRGQAA==}
     peerDependencies:
       '@types/react': '>=16.8.0 <20.0.0'
       react: '>=16.8.0 <20.0.0'
@@ -464,8 +464,8 @@ packages:
   '@fluentui/set-version@8.2.24':
     resolution: {integrity: sha512-8uNi2ThvNgF+6d3q2luFVVdk/wZV0AbRfJ85kkvf2+oSRY+f6QVK0w13vMorNhA5puumKcZniZoAfUF02w7NSg==}
 
-  '@fluentui/style-utilities@8.13.6':
-    resolution: {integrity: sha512-bFgrLoMrg7ZtyszSvFv2w7TFc+x4+qKKb3d0Sj8/lp2mGw4smqkuKzEbMMaNVzRPJwooLcwJpcGUhDCXYmDt6g==}
+  '@fluentui/style-utilities@8.14.0':
+    resolution: {integrity: sha512-8IZIjhP9eFHPSn8qVy/sO0QJe29J1xbwqhQlZw2JSC/OcLexm4GvCCQisDuKLUvlN7I0uGRhrCEJsCs3Xkbarw==}
 
   '@fluentui/theme@2.7.2':
     resolution: {integrity: sha512-UXGNfGa/1bLmYrOpmHXdvyc7CzlNSKUQAADweTncbNoMF1DvscWEjPj5kxFgCmOU8wVtvvn4GraNNUSWtNxeeA==}
@@ -519,38 +519,38 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@microsoft/applicationinsights-analytics-js@3.3.10':
-    resolution: {integrity: sha512-hr4ATKap4aLZ9X4/Rt6KT/l31vHeTrPIMrfl6P/GfMZ+gzh2EhYjjmEB1gtgLYor/D/huiMaUkakRQRGp0V/1Q==}
+  '@microsoft/applicationinsights-analytics-js@3.3.11':
+    resolution: {integrity: sha512-33fS5Y7uPgckP8yWqCAoWpWerA+d3RUC2lv6kkfJQM/V2KHeN4CGDtyXXWpq5vSZjE9BESXao13iBq4wiWit8Q==}
     peerDependencies:
       tslib: '>= 1.0.0'
 
-  '@microsoft/applicationinsights-cfgsync-js@3.3.10':
-    resolution: {integrity: sha512-YROIPKDgRTxZyAJ3v2fu56qaI+o1D/XgTIVuGP91AilGGWu3sUDL+/3KBNBGTtZlgW1e/psUhEjfHWxVS7degA==}
+  '@microsoft/applicationinsights-cfgsync-js@3.3.11':
+    resolution: {integrity: sha512-HdBc/ldMZpqGtzAFDs49o82wTdKRX2B0BzmjgS+D4MrS7CLth4MxLHJHOpmTI2bmc/S4T8n32LlFkaQCvWb9ig==}
     peerDependencies:
       tslib: '>= 1.0.0'
 
-  '@microsoft/applicationinsights-channel-js@3.3.10':
-    resolution: {integrity: sha512-iolFLz1ocWAzIQqHIEjjov3gNTPkgFQ4ArHnBcJEYoffOGWlJt6copaevS5YPI5rHzmbySsengZ8cLJJBBrXzQ==}
+  '@microsoft/applicationinsights-channel-js@3.3.11':
+    resolution: {integrity: sha512-0ex/mxTf5R+P5WSvdU8Hgbeg8VzQ0XvcnjKQdmQy05ycScnKevt8an3DEPikOFqOKDi59L5hUETZlcdhesnVtg==}
     peerDependencies:
       tslib: '>= 1.0.0'
 
-  '@microsoft/applicationinsights-common@3.3.10':
-    resolution: {integrity: sha512-RVIenPIvNgZCbjJdALvLM4rNHgAFuHI7faFzHCgnI6S2WCUNGHeXlQTs9EUUrL+n2TPp9/cd0KKMILU5VVyYiA==}
+  '@microsoft/applicationinsights-common@3.3.11':
+    resolution: {integrity: sha512-OIe5vL56lkmIsRsI21QqbGpF8gF/UzUP4mlEhGWyG2UMskdtWrY+c+xAynyNDsAjhKKge+Rrs/xkpC0Fo0QrhQ==}
     peerDependencies:
       tslib: '>= 1.0.0'
 
-  '@microsoft/applicationinsights-core-js@3.3.10':
-    resolution: {integrity: sha512-5yKeyassZTq2l+SAO4npu6LPnbS++UD+M+Ghjm9uRzoBwD8tumFx0/F8AkSVqbniSREd+ztH/2q2foewa2RZyg==}
+  '@microsoft/applicationinsights-core-js@3.3.11':
+    resolution: {integrity: sha512-WlBY1sKDNL62T++NifgFCyDuOoNUNrVILfnHubOzgU/od7MFEQYWU8EZyDcBC/+Z8e3TD6jfixurYtWoUC+6Eg==}
     peerDependencies:
       tslib: '>= 1.0.0'
 
-  '@microsoft/applicationinsights-dependencies-js@3.3.10':
-    resolution: {integrity: sha512-KtYz18c0O5VJmsztyLgnNISQ3gfZh3XaBvDrSQ8QdBzvoE6QkfQx1lLkKFvshXvWkz2aL8BxgV2B43WcX9niLg==}
+  '@microsoft/applicationinsights-dependencies-js@3.3.11':
+    resolution: {integrity: sha512-+D7vBHvLWFveZmg1PCbDhpw/tiD+/AnptzEoV8IsM9wPbiHPGHdni9IDMrTJZdJZVafO0GxnxOJNpir8QTdO8g==}
     peerDependencies:
       tslib: '>= 1.0.0'
 
-  '@microsoft/applicationinsights-properties-js@3.3.10':
-    resolution: {integrity: sha512-1pt1CCgT9MfG3YthRBhhzIStksgCMea3ctLfWDGA5414kGEMzp3xB986sC52XNzE/B6/PY8nTxATBxNEITeDVA==}
+  '@microsoft/applicationinsights-properties-js@3.3.11':
+    resolution: {integrity: sha512-GOyIV8QziFop/LelZW1LAKwhGvtjzN7d47NkSRh9ZyZPW/ahWifakdQ6mZfLcL2uTyTmpcK8JtMtfNADo77NZg==}
     peerDependencies:
       tslib: '>= 1.0.0'
 
@@ -564,8 +564,8 @@ packages:
   '@microsoft/applicationinsights-shims@3.0.1':
     resolution: {integrity: sha512-DKwboF47H1nb33rSUfjqI6ryX29v+2QWcTrRvcQDA32AZr5Ilkr7whOOSsD1aBzwqX0RJEIP1Z81jfE3NBm/Lg==}
 
-  '@microsoft/applicationinsights-web@3.3.10':
-    resolution: {integrity: sha512-okQ2BPYlEnlAjSK80vXdpDB37Yl+LR/TULiLffqUEFAyr5YvnsOViEOus+uS9stOz+YhaU7sWNFAjFO31k2cBg==}
+  '@microsoft/applicationinsights-web@3.3.11':
+    resolution: {integrity: sha512-LEI6LhfLFzBfPJ4j5TTPNC8LxwDpiJZSeyD2VVU3EPN2RtK+15vEL0oONaSV/AsWnDrwH3DIku0Nm+EVRJ4pNQ==}
     peerDependencies:
       tslib: '>= 1.0.0'
 
@@ -575,8 +575,8 @@ packages:
   '@microsoft/load-themed-styles@1.10.295':
     resolution: {integrity: sha512-W+IzEBw8a6LOOfRJM02dTT7BDZijxm+Z7lhtOAz1+y9vQm1Kdz9jlAO+qCEKsfxtUOmKilW8DIRqFw2aUgKeGg==}
 
-  '@nevware21/ts-async@0.5.4':
-    resolution: {integrity: sha512-IBTyj29GwGlxfzXw2NPnzty+w0Adx61Eze1/lknH/XIVdxtF9UnOpk76tnrHXWa6j84a1RR9hsOcHQPFv9qJjA==}
+  '@nevware21/ts-async@0.5.5':
+    resolution: {integrity: sha512-vwqaL05iJPjLeh5igPi8MeeAu10i+Aq7xko1fbo9F5Si6MnVN5505qaV7AhSdk5MCBJVT/UYMk3kgInNjDb4Ig==}
 
   '@nevware21/ts-utils@0.12.5':
     resolution: {integrity: sha512-JPQZWPKQJjj7kAftdEZL0XDFfbMgXCGiUAZe0d7EhLC3QlXTlZdSckGqqRIQ2QNl0VTEZyZUvRBw6Ednw089Fw==}
@@ -788,8 +788,8 @@ packages:
   '@swc/counter@0.1.3':
     resolution: {integrity: sha512-e2BR4lsJkkRlKZ/qCHPw9ZaSxc0MVUd7gtbtaB7aMvHeJVYe8sOB8DBZkP2DtISHGSku9sCK6T6cnY0CtXrOCQ==}
 
-  '@swc/helpers@0.5.17':
-    resolution: {integrity: sha512-5IKx/Y13RsYd+sauPb2x+U/xZikHjolzfuDgTAl/Tdf3Q8rslRvC19NKDLgAJQ6wsqADk10ntlv08nPFw/gO/A==}
+  '@swc/helpers@0.5.18':
+    resolution: {integrity: sha512-TXTnIcNJQEKwThMMqBXsZ4VGAza6bvN4pa41Rkqoio6QBKMvo+5lexeTMScGCIxtzgQJzElcvIltani+adC5PQ==}
 
   '@swc/types@0.1.25':
     resolution: {integrity: sha512-iAoY/qRhNH8a/hBvm3zKj9qQ4oc2+3w1unPJa2XvTK3XjeLXtzcCingVPw/9e5mn1+0yPqxcBGp9Jf0pkfMb1g==}
@@ -1049,8 +1049,8 @@ packages:
     peerDependencies:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0
 
-  eslint-plugin-react-refresh@0.4.24:
-    resolution: {integrity: sha512-nLHIW7TEq3aLrEYWpVaJ1dRgFR+wLDPN8e8FpYAql/bMV2oBEfC37K0gLEGgv9fy66juNShSMV8OkTqzltcG/w==}
+  eslint-plugin-react-refresh@0.4.26:
+    resolution: {integrity: sha512-1RETEylht2O6FM/MvgnyvT+8K21wLqDNg4qD51Zj3guhjt433XbnnkVttHMyaVyAFD03QSV4LPS5iE3VQmO7XQ==}
     peerDependencies:
       eslint: '>=8.40'
 
@@ -1930,21 +1930,21 @@ snapshots:
       '@fluentui/set-version': 8.2.24
       tslib: 2.8.1
 
-  '@fluentui/font-icons-mdl2@8.5.70(@types/react@19.2.7)(react@19.1.5)':
+  '@fluentui/font-icons-mdl2@8.5.71(@types/react@19.2.7)(react@19.1.5)':
     dependencies:
       '@fluentui/set-version': 8.2.24
-      '@fluentui/style-utilities': 8.13.6(@types/react@19.2.7)(react@19.1.5)
+      '@fluentui/style-utilities': 8.14.0(@types/react@19.2.7)(react@19.1.5)
       '@fluentui/utilities': 8.17.2(@types/react@19.2.7)(react@19.1.5)
       tslib: 2.8.1
     transitivePeerDependencies:
       - '@types/react'
       - react
 
-  '@fluentui/foundation-legacy@8.6.3(@types/react@19.2.7)(react@19.1.5)':
+  '@fluentui/foundation-legacy@8.6.4(@types/react@19.2.7)(react@19.1.5)':
     dependencies:
       '@fluentui/merge-styles': 8.6.14
       '@fluentui/set-version': 8.2.24
-      '@fluentui/style-utilities': 8.13.6(@types/react@19.2.7)(react@19.1.5)
+      '@fluentui/style-utilities': 8.14.0(@types/react@19.2.7)(react@19.1.5)
       '@fluentui/utilities': 8.17.2(@types/react@19.2.7)(react@19.1.5)
       '@types/react': 19.2.7
       react: 19.1.5
@@ -1959,12 +1959,12 @@ snapshots:
       '@fluentui/set-version': 8.2.24
       tslib: 2.8.1
 
-  '@fluentui/react-focus@8.10.3(@types/react@19.2.7)(react@19.1.5)':
+  '@fluentui/react-focus@8.10.4(@types/react@19.2.7)(react@19.1.5)':
     dependencies:
       '@fluentui/keyboard-key': 0.4.23
       '@fluentui/merge-styles': 8.6.14
       '@fluentui/set-version': 8.2.24
-      '@fluentui/style-utilities': 8.13.6(@types/react@19.2.7)(react@19.1.5)
+      '@fluentui/style-utilities': 8.14.0(@types/react@19.2.7)(react@19.1.5)
       '@fluentui/utilities': 8.17.2(@types/react@19.2.7)(react@19.1.5)
       '@types/react': 19.2.7
       react: 19.1.5
@@ -1981,7 +1981,7 @@ snapshots:
 
   '@fluentui/react-portal-compat-context@9.0.15(@types/react@19.2.7)(react@19.1.5)':
     dependencies:
-      '@swc/helpers': 0.5.17
+      '@swc/helpers': 0.5.18
       '@types/react': 19.2.7
       react: 19.1.5
 
@@ -1995,15 +1995,15 @@ snapshots:
   '@fluentui/react@8.122.19(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.1.5(react@19.1.5))(react@19.1.5)':
     dependencies:
       '@fluentui/date-time-utilities': 8.6.11
-      '@fluentui/font-icons-mdl2': 8.5.70(@types/react@19.2.7)(react@19.1.5)
-      '@fluentui/foundation-legacy': 8.6.3(@types/react@19.2.7)(react@19.1.5)
+      '@fluentui/font-icons-mdl2': 8.5.71(@types/react@19.2.7)(react@19.1.5)
+      '@fluentui/foundation-legacy': 8.6.4(@types/react@19.2.7)(react@19.1.5)
       '@fluentui/merge-styles': 8.6.14
-      '@fluentui/react-focus': 8.10.3(@types/react@19.2.7)(react@19.1.5)
+      '@fluentui/react-focus': 8.10.4(@types/react@19.2.7)(react@19.1.5)
       '@fluentui/react-hooks': 8.10.2(@types/react@19.2.7)(react@19.1.5)
       '@fluentui/react-portal-compat-context': 9.0.15(@types/react@19.2.7)(react@19.1.5)
       '@fluentui/react-window-provider': 2.3.2(@types/react@19.2.7)(react@19.1.5)
       '@fluentui/set-version': 8.2.24
-      '@fluentui/style-utilities': 8.13.6(@types/react@19.2.7)(react@19.1.5)
+      '@fluentui/style-utilities': 8.14.0(@types/react@19.2.7)(react@19.1.5)
       '@fluentui/theme': 2.7.2(@types/react@19.2.7)(react@19.1.5)
       '@fluentui/utilities': 8.17.2(@types/react@19.2.7)(react@19.1.5)
       '@microsoft/load-themed-styles': 1.10.295
@@ -2017,7 +2017,7 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@fluentui/style-utilities@8.13.6(@types/react@19.2.7)(react@19.1.5)':
+  '@fluentui/style-utilities@8.14.0(@types/react@19.2.7)(react@19.1.5)':
     dependencies:
       '@fluentui/merge-styles': 8.6.14
       '@fluentui/set-version': 8.2.24
@@ -2089,65 +2089,65 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@microsoft/applicationinsights-analytics-js@3.3.10(tslib@2.8.1)':
+  '@microsoft/applicationinsights-analytics-js@3.3.11(tslib@2.8.1)':
     dependencies:
-      '@microsoft/applicationinsights-common': 3.3.10(tslib@2.8.1)
-      '@microsoft/applicationinsights-core-js': 3.3.10(tslib@2.8.1)
+      '@microsoft/applicationinsights-common': 3.3.11(tslib@2.8.1)
+      '@microsoft/applicationinsights-core-js': 3.3.11(tslib@2.8.1)
       '@microsoft/applicationinsights-shims': 3.0.1
       '@microsoft/dynamicproto-js': 2.0.3
       '@nevware21/ts-utils': 0.12.5
       tslib: 2.8.1
 
-  '@microsoft/applicationinsights-cfgsync-js@3.3.10(tslib@2.8.1)':
+  '@microsoft/applicationinsights-cfgsync-js@3.3.11(tslib@2.8.1)':
     dependencies:
-      '@microsoft/applicationinsights-common': 3.3.10(tslib@2.8.1)
-      '@microsoft/applicationinsights-core-js': 3.3.10(tslib@2.8.1)
+      '@microsoft/applicationinsights-common': 3.3.11(tslib@2.8.1)
+      '@microsoft/applicationinsights-core-js': 3.3.11(tslib@2.8.1)
       '@microsoft/applicationinsights-shims': 3.0.1
       '@microsoft/dynamicproto-js': 2.0.3
-      '@nevware21/ts-async': 0.5.4
+      '@nevware21/ts-async': 0.5.5
       '@nevware21/ts-utils': 0.12.5
       tslib: 2.8.1
 
-  '@microsoft/applicationinsights-channel-js@3.3.10(tslib@2.8.1)':
+  '@microsoft/applicationinsights-channel-js@3.3.11(tslib@2.8.1)':
     dependencies:
-      '@microsoft/applicationinsights-common': 3.3.10(tslib@2.8.1)
-      '@microsoft/applicationinsights-core-js': 3.3.10(tslib@2.8.1)
+      '@microsoft/applicationinsights-common': 3.3.11(tslib@2.8.1)
+      '@microsoft/applicationinsights-core-js': 3.3.11(tslib@2.8.1)
       '@microsoft/applicationinsights-shims': 3.0.1
       '@microsoft/dynamicproto-js': 2.0.3
-      '@nevware21/ts-async': 0.5.4
+      '@nevware21/ts-async': 0.5.5
       '@nevware21/ts-utils': 0.12.5
       tslib: 2.8.1
 
-  '@microsoft/applicationinsights-common@3.3.10(tslib@2.8.1)':
+  '@microsoft/applicationinsights-common@3.3.11(tslib@2.8.1)':
     dependencies:
-      '@microsoft/applicationinsights-core-js': 3.3.10(tslib@2.8.1)
+      '@microsoft/applicationinsights-core-js': 3.3.11(tslib@2.8.1)
       '@microsoft/applicationinsights-shims': 3.0.1
       '@microsoft/dynamicproto-js': 2.0.3
       '@nevware21/ts-utils': 0.12.5
       tslib: 2.8.1
 
-  '@microsoft/applicationinsights-core-js@3.3.10(tslib@2.8.1)':
+  '@microsoft/applicationinsights-core-js@3.3.11(tslib@2.8.1)':
     dependencies:
       '@microsoft/applicationinsights-shims': 3.0.1
       '@microsoft/dynamicproto-js': 2.0.3
-      '@nevware21/ts-async': 0.5.4
+      '@nevware21/ts-async': 0.5.5
       '@nevware21/ts-utils': 0.12.5
       tslib: 2.8.1
 
-  '@microsoft/applicationinsights-dependencies-js@3.3.10(tslib@2.8.1)':
+  '@microsoft/applicationinsights-dependencies-js@3.3.11(tslib@2.8.1)':
     dependencies:
-      '@microsoft/applicationinsights-common': 3.3.10(tslib@2.8.1)
-      '@microsoft/applicationinsights-core-js': 3.3.10(tslib@2.8.1)
+      '@microsoft/applicationinsights-common': 3.3.11(tslib@2.8.1)
+      '@microsoft/applicationinsights-core-js': 3.3.11(tslib@2.8.1)
       '@microsoft/applicationinsights-shims': 3.0.1
       '@microsoft/dynamicproto-js': 2.0.3
-      '@nevware21/ts-async': 0.5.4
+      '@nevware21/ts-async': 0.5.5
       '@nevware21/ts-utils': 0.12.5
       tslib: 2.8.1
 
-  '@microsoft/applicationinsights-properties-js@3.3.10(tslib@2.8.1)':
+  '@microsoft/applicationinsights-properties-js@3.3.11(tslib@2.8.1)':
     dependencies:
-      '@microsoft/applicationinsights-common': 3.3.10(tslib@2.8.1)
-      '@microsoft/applicationinsights-core-js': 3.3.10(tslib@2.8.1)
+      '@microsoft/applicationinsights-common': 3.3.11(tslib@2.8.1)
+      '@microsoft/applicationinsights-core-js': 3.3.11(tslib@2.8.1)
       '@microsoft/applicationinsights-shims': 3.0.1
       '@microsoft/dynamicproto-js': 2.0.3
       '@nevware21/ts-utils': 0.12.5
@@ -2155,8 +2155,8 @@ snapshots:
 
   '@microsoft/applicationinsights-react-js@17.3.6(history@5.3.0)(react@19.1.5)(tslib@2.8.1)':
     dependencies:
-      '@microsoft/applicationinsights-common': 3.3.10(tslib@2.8.1)
-      '@microsoft/applicationinsights-core-js': 3.3.10(tslib@2.8.1)
+      '@microsoft/applicationinsights-common': 3.3.11(tslib@2.8.1)
+      '@microsoft/applicationinsights-core-js': 3.3.11(tslib@2.8.1)
       '@microsoft/applicationinsights-shims': 3.0.1
       '@microsoft/dynamicproto-js': 2.0.3
       '@nevware21/ts-utils': 0.12.5
@@ -2168,18 +2168,18 @@ snapshots:
     dependencies:
       '@nevware21/ts-utils': 0.12.5
 
-  '@microsoft/applicationinsights-web@3.3.10(tslib@2.8.1)':
+  '@microsoft/applicationinsights-web@3.3.11(tslib@2.8.1)':
     dependencies:
-      '@microsoft/applicationinsights-analytics-js': 3.3.10(tslib@2.8.1)
-      '@microsoft/applicationinsights-cfgsync-js': 3.3.10(tslib@2.8.1)
-      '@microsoft/applicationinsights-channel-js': 3.3.10(tslib@2.8.1)
-      '@microsoft/applicationinsights-common': 3.3.10(tslib@2.8.1)
-      '@microsoft/applicationinsights-core-js': 3.3.10(tslib@2.8.1)
-      '@microsoft/applicationinsights-dependencies-js': 3.3.10(tslib@2.8.1)
-      '@microsoft/applicationinsights-properties-js': 3.3.10(tslib@2.8.1)
+      '@microsoft/applicationinsights-analytics-js': 3.3.11(tslib@2.8.1)
+      '@microsoft/applicationinsights-cfgsync-js': 3.3.11(tslib@2.8.1)
+      '@microsoft/applicationinsights-channel-js': 3.3.11(tslib@2.8.1)
+      '@microsoft/applicationinsights-common': 3.3.11(tslib@2.8.1)
+      '@microsoft/applicationinsights-core-js': 3.3.11(tslib@2.8.1)
+      '@microsoft/applicationinsights-dependencies-js': 3.3.11(tslib@2.8.1)
+      '@microsoft/applicationinsights-properties-js': 3.3.11(tslib@2.8.1)
       '@microsoft/applicationinsights-shims': 3.0.1
       '@microsoft/dynamicproto-js': 2.0.3
-      '@nevware21/ts-async': 0.5.4
+      '@nevware21/ts-async': 0.5.5
       '@nevware21/ts-utils': 0.12.5
       tslib: 2.8.1
 
@@ -2189,7 +2189,7 @@ snapshots:
 
   '@microsoft/load-themed-styles@1.10.295': {}
 
-  '@nevware21/ts-async@0.5.4':
+  '@nevware21/ts-async@0.5.5':
     dependencies:
       '@nevware21/ts-utils': 0.12.5
 
@@ -2302,7 +2302,7 @@ snapshots:
   '@swc/core-win32-x64-msvc@1.13.5':
     optional: true
 
-  '@swc/core@1.13.5(@swc/helpers@0.5.17)':
+  '@swc/core@1.13.5(@swc/helpers@0.5.18)':
     dependencies:
       '@swc/counter': 0.1.3
       '@swc/types': 0.1.25
@@ -2317,11 +2317,11 @@ snapshots:
       '@swc/core-win32-arm64-msvc': 1.13.5
       '@swc/core-win32-ia32-msvc': 1.13.5
       '@swc/core-win32-x64-msvc': 1.13.5
-      '@swc/helpers': 0.5.17
+      '@swc/helpers': 0.5.18
 
   '@swc/counter@0.1.3': {}
 
-  '@swc/helpers@0.5.17':
+  '@swc/helpers@0.5.18':
     dependencies:
       tslib: 2.8.1
 
@@ -2433,10 +2433,10 @@ snapshots:
 
   '@ungap/structured-clone@1.3.0': {}
 
-  '@vitejs/plugin-react-swc@3.11.0(@swc/helpers@0.5.17)(vite@6.3.6)':
+  '@vitejs/plugin-react-swc@3.11.0(@swc/helpers@0.5.18)(vite@6.3.6)':
     dependencies:
       '@rolldown/pluginutils': 1.0.0-beta.27
-      '@swc/core': 1.13.5(@swc/helpers@0.5.17)
+      '@swc/core': 1.13.5(@swc/helpers@0.5.18)
       vite: 6.3.6
     transitivePeerDependencies:
       - '@swc/helpers'
@@ -2615,7 +2615,7 @@ snapshots:
     dependencies:
       eslint: 8.57.1
 
-  eslint-plugin-react-refresh@0.4.24(eslint@8.57.1):
+  eslint-plugin-react-refresh@0.4.26(eslint@8.57.1):
     dependencies:
       eslint: 8.57.1
 
