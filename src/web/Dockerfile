@@ -1,4 +1,4 @@
-FROM node:22-alpine@sha256:d2166de198f26e17e5a442f537754dd616ab069c47cc57b889310a717e0abbf9 AS build
+FROM node:22-alpine@sha256:e4bf2a82ad0a4037d28035ae71529873c069b13eb0455466ae0bc13363826e34 AS build
 
 # make the 'app' folder the current working directory
 WORKDIR /app
@@ -9,7 +9,7 @@ COPY . .
 RUN npm ci
 RUN npm run build
 
-FROM nginx:alpine@sha256:42a516af16b852e33b7682d5ef8acbd5d13fe08fecadc7ed98605ba5e3b26ab8
+FROM nginx:alpine@sha256:1d13701a5f9f3fb01aaa88cef2344d65b6b5bf6b7d9fa4cf0dca557a8d7702ba
 
 WORKDIR /usr/share/nginx/html
 COPY --from=build /app/dist .
