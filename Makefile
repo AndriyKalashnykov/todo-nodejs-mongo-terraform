@@ -13,6 +13,9 @@ NODE_VERSION     := 24
 ACT_VERSION      := 0.2.87
 HADOLINT_VERSION := 2.14.0
 
+# === pnpm (CI-safe: uses --frozen-lockfile when CI=true) ===
+PNPM_INSTALL    := pnpm install $(if $(CI),--frozen-lockfile,)
+
 # === Docker ===
 API_IMAGE       := todo-api
 WEB_IMAGE       := todo-web
@@ -65,9 +68,9 @@ deps-hadolint:
 
 #install: @ Install pnpm dependencies for all packages
 install: deps
-	@cd $(API_DIR) && pnpm install --frozen-lockfile
-	@cd $(WEB_DIR) && pnpm install --frozen-lockfile
-	@cd $(TEST_DIR) && pnpm install --frozen-lockfile
+	@cd $(API_DIR) && $(PNPM_INSTALL)
+	@cd $(WEB_DIR) && $(PNPM_INSTALL)
+	@cd $(TEST_DIR) && $(PNPM_INSTALL)
 
 #clean: @ Remove build artifacts
 clean:
@@ -78,9 +81,9 @@ clean:
 #lint: @ Lint all code and Dockerfiles
 lint: deps deps-hadolint
 	@echo "=== Lint API ==="
-	@cd $(API_DIR) && pnpm install && pnpm run lint
+	@cd $(API_DIR) && $(PNPM_INSTALL) && pnpm run lint
 	@echo "=== Lint Web ==="
-	@cd $(WEB_DIR) && pnpm install && pnpm run lint
+	@cd $(WEB_DIR) && $(PNPM_INSTALL) && pnpm run lint
 	@echo "=== Lint Dockerfiles ==="
 	@hadolint $(API_DIR)/Dockerfile
 	@hadolint $(WEB_DIR)/Dockerfile
@@ -88,23 +91,23 @@ lint: deps deps-hadolint
 #build: @ Build API and Web
 build: deps
 	@echo "=== Build API ==="
-	@cd $(API_DIR) && pnpm install && pnpm run build
+	@cd $(API_DIR) && $(PNPM_INSTALL) && pnpm run build
 	@echo "=== Build Web ==="
-	@cd $(WEB_DIR) && pnpm install && pnpm run build
+	@cd $(WEB_DIR) && $(PNPM_INSTALL) && pnpm run build
 
 #test: @ Run API tests (requires MongoDB - use compose-up first)
 test: deps
-	@cd $(API_DIR) && pnpm install && pnpm test
+	@cd $(API_DIR) && $(PNPM_INSTALL) && pnpm test
 
 #e2e: @ Run Playwright end-to-end tests
 e2e: deps
-	@cd $(TEST_DIR) && pnpm install && pnpm exec playwright install --with-deps && pnpm exec playwright test
+	@cd $(TEST_DIR) && $(PNPM_INSTALL) && pnpm exec playwright install --with-deps && pnpm exec playwright test
 
 #run: @ Start API and Web locally (API on :3100, Web on :3000)
 run: deps
 	@echo "Starting API on http://localhost:3100 and Web on http://localhost:3000"
-	@cd $(API_DIR) && pnpm install && pnpm start &
-	@cd $(WEB_DIR) && pnpm install && pnpm run dev
+	@cd $(API_DIR) && $(PNPM_INSTALL) && pnpm start &
+	@cd $(WEB_DIR) && $(PNPM_INSTALL) && pnpm run dev
 
 #ci: @ Run full local CI pipeline (lint, build)
 ci: deps lint build

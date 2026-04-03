@@ -33,12 +33,14 @@ jobs:
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
           node-version: 24
+          cache: 'pnpm'
+          cache-dependency-path: '**/pnpm-lock.yaml'
 
-      - name: Lint api
-        run: cd ./src/api && pnpm install --frozen-lockfile && pnpm run lint
+      - name: Install dependencies
+        run: make install
 
-      - name: Lint web
-        run: cd ./src/web && pnpm install --frozen-lockfile && pnpm run lint
+      - name: Lint
+        run: make lint
 
   build:
     needs: [lint]
@@ -58,12 +60,14 @@ jobs:
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
           node-version: 24
+          cache: 'pnpm'
+          cache-dependency-path: '**/pnpm-lock.yaml'
 
-      - name: Build api
-        run: cd ./src/api && pnpm install --frozen-lockfile && pnpm run build
+      - name: Install dependencies
+        run: make install
 
-      - name: Build web
-        run: cd ./src/web && pnpm install --frozen-lockfile && pnpm run build
+      - name: Build
+        run: make build
 
   test:
     needs: [lint]
@@ -93,9 +97,14 @@ jobs:
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
           node-version: 24
+          cache: 'pnpm'
+          cache-dependency-path: '**/pnpm-lock.yaml'
 
-      - name: Test api
-        run: cd ./src/api && pnpm install --frozen-lockfile && pnpm test
+      - name: Install dependencies
+        run: make install
+
+      - name: Test
+        run: make test
         env:
           AZURE_COSMOS_CONNECTION_STRING: "mongodb://localhost:27017"
           AZURE_COSMOS_DATABASE_NAME: "Todo"
