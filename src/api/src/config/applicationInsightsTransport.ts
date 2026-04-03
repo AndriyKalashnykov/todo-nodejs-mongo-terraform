@@ -1,5 +1,4 @@
-import { TelemetryClient } from "applicationinsights";
-import { SeverityLevel, TraceTelemetry } from "applicationinsights/out/Declarations/Contracts";
+import { TelemetryClient, KnownSeverityLevel, TraceTelemetry } from "applicationinsights";
 import Transport, { TransportStreamOptions } from "winston-transport";
 import { LogEntry } from "winston";
 import { LogLevel } from "./observability";
@@ -28,19 +27,19 @@ export class ApplicationInsightsTransport extends Transport {
     }
 }
 
-const convertToSeverity = (level: LogLevel | string): SeverityLevel => {
+const convertToSeverity = (level: LogLevel | string): KnownSeverityLevel => {
     switch (level) {
     case LogLevel.Debug:
-        return SeverityLevel.Verbose;
+        return KnownSeverityLevel.Verbose;
     case LogLevel.Verbose:
-        return SeverityLevel.Verbose;
+        return KnownSeverityLevel.Verbose;
     case LogLevel.Error:
-        return SeverityLevel.Error;
+        return KnownSeverityLevel.Error;
     case LogLevel.Warning:
-        return SeverityLevel.Warning;
+        return KnownSeverityLevel.Warning;
     case LogLevel.Information:
-        return SeverityLevel.Information;
+        return KnownSeverityLevel.Information;
     default:
-        return SeverityLevel.Verbose;
+        return KnownSeverityLevel.Verbose;
     }
 };

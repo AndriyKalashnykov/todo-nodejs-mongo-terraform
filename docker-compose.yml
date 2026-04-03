@@ -1,0 +1,38 @@
+services:
+  mongo:
+    image: mongo:8
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: ./src/api
+      dockerfile: Dockerfile
+    ports:
+      - "3100:3100"
+    environment:
+      AZURE_COSMOS_CONNECTION_STRING: "mongodb://mongo:27017"
+      AZURE_COSMOS_DATABASE_NAME: "Todo"
+      PORT: "3100"
+    depends_on:
+      mongo:
+        condition: service_healthy
+
+  web:
+    build:
+      context: ./src/web
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - api
+
+volumes:
+  mongo-data:

@@ -5,58 +5,88 @@
     ":approveMajorUpdates",
     ":label(dependencies)",
     ":semanticCommitType(chore)",
-    "schedule:daily",
-    ":automergePatch",
-    ":automergePr",
-    ":automergeRequireAllStatusChecks",
-    ":prConcurrentLimitNone",
-    ":separatePatchReleases"
+    ":automergeRequireAllStatusChecks"
   ],
   "commitMessagePrefix": "chore(all): ",
   "commitMessageAction": "update",
   "commitBody": "Signed-off-by: Renovate Bot <bot@renovateapp.com>",
   "platformAutomerge": true,
-  "groupName": "all",
-  "packageRules": [
+  "automergeType": "branch",
+  "automerge": true,
+  "automergeStrategy": "squash",
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 50,
+  "ignoreTests": false,
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
+  },
+  "npm": {
+    "minimumReleaseAge": "3 days"
+  },
+  "vulnerabilityAlerts": {
+    "labels": ["security"],
+    "automerge": true,
+    "minimumReleaseAge": "0 days"
+  },
+  "customManagers": [
     {
-      "description": "Automerge non-major updates",
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
-      "automerge": true,
-      "automergeType": "pr",
-      "platformAutomerge": true
+      "customType": "regex",
+      "description": "Track act version in Makefile",
+      "managerFilePatterns": ["/^Makefile$/"],
+      "matchStrings": ["ACT_VERSION\\s*:=\\s*(?<currentValue>.*?)\\n"],
+      "depNameTemplate": "nektos/act",
+      "datasourceTemplate": "github-releases",
+      "extractVersionTemplate": "^v(?<version>.*)$"
     },
     {
+      "customType": "regex",
+      "description": "Track hadolint version in Makefile",
+      "managerFilePatterns": ["/^Makefile$/"],
+      "matchStrings": ["HADOLINT_VERSION\\s*:=\\s*(?<currentValue>.*?)\\n"],
+      "depNameTemplate": "hadolint/hadolint",
+      "datasourceTemplate": "github-releases",
+      "extractVersionTemplate": "^v(?<version>.*)$"
+    },
+    {
+      "customType": "regex",
+      "description": "Track nvm version in Makefile",
+      "managerFilePatterns": ["/^Makefile$/"],
+      "matchStrings": ["NVM_VERSION\\s*:=\\s*(?<currentValue>.*?)\\n"],
+      "depNameTemplate": "nvm-sh/nvm",
+      "datasourceTemplate": "github-releases",
+      "extractVersionTemplate": "^v(?<version>.*)$"
+    }
+  ],
+  "packageRules": [
+    {
       "description": "Wait 3 days before automerging major updates",
-      "matchUpdateTypes": [
-        "major"
-      ],
+      "matchUpdateTypes": ["major"],
       "minimumReleaseAge": "3 days"
     },
     {
       "description": "Group GitHub Actions into one PR",
-      "matchManagers": [
-        "github-actions"
-      ],
+      "matchManagers": ["github-actions"],
       "groupName": "GitHub Actions"
+    },
+    {
+      "description": "Group devDependencies non-major updates",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "dev-dependencies",
+      "automerge": true
+    },
+    {
+      "description": "Group Makefile tool versions",
+      "matchManagers": ["custom.regex"],
+      "groupName": "Makefile tools",
+      "automerge": true
+    },
+    {
+      "description": "Group type definitions",
+      "matchPackageNames": ["/^@types\\//"],
+      "groupName": "type-definitions",
+      "automerge": true
     }
-  ],
-  "automergeType": "branch",
-  "prHourlyLimit": 0,
-  "prConcurrentLimit": 50,
-  "automerge": true,
-  "ignoreTests": false,
-  "automergeStrategy": "squash",
-  "labels": [
-    "dependencies"
-  ],
-  "vulnerabilityAlerts": {
-    "labels": [
-      "security"
-    ],
-    "automerge": true,
-    "minimumReleaseAge": "0 days"
-  }
+  ]
 }

@@ -4,13 +4,13 @@
   "description": "Express Todo REST API",
   "main": "dist/index.js",
   "scripts": {
-    "lint": "eslint src/**/*.ts",
-    "lint:fix": "eslint src/**/*.ts --fix",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
     "prebuild": "npm run lint",
     "build": "tsc -b .",
     "prestart": "npm run build",
     "start": "node .",
-    "test": "jest --coverage"
+    "test": "jest --coverage --forceExit"
   },
   "author": "",
   "license": "MIT",
@@ -49,8 +49,7 @@
     "@types/supertest": "7.2.0",
     "@types/swagger-jsdoc": "6.0.4",
     "@types/swagger-ui-express": "4.1.8",
-    "@types/uuid": "11.0.0",
-    "@types/yamljs": "0.2.34",
+"@types/yamljs": "0.2.34",
     "@typescript-eslint/eslint-plugin": "8.58.0",
     "@typescript-eslint/parser": "8.58.0",
     "eslint": "10.1.0",

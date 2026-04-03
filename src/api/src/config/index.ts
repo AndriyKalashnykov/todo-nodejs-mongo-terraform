@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import { DefaultAzureCredential } from "@azure/identity";
 import { SecretClient } from "@azure/keyvault-secrets";
 import { logger } from "../config/observability";
-import { IConfig } from "config";
+import { Config } from "config";
 
 export const getConfig: () => Promise<AppConfig> = async () => {
     // Load any ENV vars from local .env file
@@ -14,8 +14,8 @@ export const getConfig: () => Promise<AppConfig> = async () => {
     await populateEnvironmentFromKeyVault();
 
     // Load configuration after Azure KeyVault population is complete
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const config: IConfig = require("config") as IConfig;
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const config: Config = require("config") as Config;
     const databaseConfig = config.get<DatabaseConfig>("database");
     const observabilityConfig = config.get<ObservabilityConfig>("observability");
 

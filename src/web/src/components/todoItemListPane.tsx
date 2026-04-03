@@ -60,7 +60,6 @@ const TodoItemListPane: FC<TodoItemListPaneProps> = (props: TodoItemListPaneProp
     const [selectedItems, setSelectedItems] = useState<TodoItem[]>([]);
     const [isDoneCategoryCollapsed, setIsDoneCategoryCollapsed] = useState(true);
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     const selection = new Selection({
         onSelectionChanged: () => {
             const selectedItems = selection.getSelection().map(item => (item as TodoDisplayItem).data);

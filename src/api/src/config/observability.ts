@@ -42,7 +42,6 @@ export const observability = (config: ObservabilityConfig) => {
             .setDistributedTracingMode(applicationInsights.DistributedTracingModes.AI_AND_W3C);
 
         applicationInsights.defaultClient.context.tags[applicationInsights.defaultClient.context.keys.cloudRole] = config.roleName;
-        applicationInsights.defaultClient.setAutoPopulateAzureProperties(true);
         applicationInsights.start();
 
         const applicationInsightsTransport = new ApplicationInsightsTransport({
