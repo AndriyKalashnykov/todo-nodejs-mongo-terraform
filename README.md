@@ -2,9 +2,8 @@
 [![Hits](https://hits.sh/github.com/AndriyKalashnykov/todo-nodejs-mongo-terraform.svg?view=today-total&style=plastic)](https://hits.sh/github.com/AndriyKalashnykov/todo-nodejs-mongo-terraform/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://app.renovatebot.com/dashboard#github/AndriyKalashnykov/todo-nodejs-mongo-terraform)
-
-[![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=brightgreen&logo=github)](https://codespaces.new/AndriyKalashnykov/todo-nodejs-mongo-terraform)
-[![Open in Dev Container](https://img.shields.io/static/v1?style=for-the-badge&label=Dev+Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/AndriyKalashnykov/todo-nodejs-mongo-terraform)
+[![Open in GitHub Codespaces](https://img.shields.io/static/v1?label=GitHub+Codespaces&message=Open&color=brightgreen&logo=github)](https://codespaces.new/AndriyKalashnykov/todo-nodejs-mongo-terraform)
+[![Open in Dev Container](https://img.shields.io/static/v1?label=Dev+Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/AndriyKalashnykov/todo-nodejs-mongo-terraform)
 
 # Todo App - Node.js, React, MongoDB on Azure
 
