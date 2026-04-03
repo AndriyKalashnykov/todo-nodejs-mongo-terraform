@@ -24,16 +24,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa # v4
+        with:
+          version: 10
+
       - name: Install Nodejs
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
           node-version: 24
 
       - name: Lint api
-        run: cd ./src/api && npm install && npm run lint
+        run: cd ./src/api && pnpm install --frozen-lockfile && pnpm run lint
 
       - name: Lint web
-        run: cd ./src/web && npm install && npm run lint
+        run: cd ./src/web && pnpm install --frozen-lockfile && pnpm run lint
 
   build:
     needs: [lint]
@@ -44,16 +49,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa # v4
+        with:
+          version: 10
+
       - name: Install Nodejs
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
           node-version: 24
 
       - name: Build api
-        run: cd ./src/api && npm install && npm run build
+        run: cd ./src/api && pnpm install --frozen-lockfile && pnpm run build
 
       - name: Build web
-        run: cd ./src/web && npm install && npm run build
+        run: cd ./src/web && pnpm install --frozen-lockfile && pnpm run build
 
   test:
     needs: [lint]
@@ -74,13 +84,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa # v4
+        with:
+          version: 10
+
       - name: Install Nodejs
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
           node-version: 24
 
       - name: Test api
-        run: cd ./src/api && npm install && npm test
+        run: cd ./src/api && pnpm install --frozen-lockfile && pnpm test
         env:
           AZURE_COSMOS_CONNECTION_STRING: "mongodb://localhost:27017"
           AZURE_COSMOS_DATABASE_NAME: "Todo"
@@ -130,6 +145,11 @@ jobs:
 
       - name: Install Terraform CLI
         uses: hashicorp/setup-terraform@5e8dbf3c6d9deaf4193ca7a8fb23f2ac83bb6c85 # v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa # v4
+        with:
+          version: 10
 
       - name: Install Nodejs
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6

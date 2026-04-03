@@ -10,6 +10,7 @@ Full-stack Todo application with Node.js/Express API, React frontend, and Azure 
 - **Web:** React 19 + Vite + TypeScript + Fluent UI
 - **Infrastructure:** Terraform on Azure (Cosmos DB, App Service, Key Vault, APIM)
 - **E2E Tests:** Playwright
+- **Package Manager:** pnpm (via corepack)
 - **CI/CD:** GitHub Actions (lint -> build + test -> deploy) + Azure Developer CLI (azd)
 
 ## Project Structure
@@ -51,24 +52,14 @@ make ci        # Full local CI pipeline
 ## Notes
 
 - API tests require a running MongoDB instance (integration tests, not unit tests)
-- Web uses `legacy-peer-deps=true` in `.npmrc` until `eslint-plugin-react-hooks` supports ESLint 10
+- Uses pnpm (not npm) — install via `corepack enable pnpm`
 - ESLint uses flat config format (`eslint.config.mjs` / `eslint.config.js`)
 
 ## Upgrade Backlog
 
 Last reviewed: 2026-04-03
 
-- [ ] Replace `yamljs` with `js-yaml` (abandoned 5+ years)
-- [ ] Upgrade `@playwright/test` from ^1.22.2 to latest (37 minor versions behind)
-- [ ] Update devcontainer from Bullseye (EOL) to Bookworm: `24-bookworm`
-- [ ] Remove `@babel/plugin-proposal-private-property-in-object` (deprecated, unused with Vite)
-- [ ] Remove `history` package (unnecessary with React Router v7)
-- [ ] Upgrade `uuid` in tests from v8 to v9+ and drop `@types/uuid`
-- [ ] Add `.nvmrc` and `engines` field to enforce Node.js version
-- [ ] Switch CI from `npm install` to `npm ci`
-- [ ] Upgrade API tsconfig target from `es2020` to `es2022`
-- [ ] Evaluate TypeScript 6.0 migration when ecosystem is ready
-- [ ] Consider upgrading OpenAPI spec from 3.0.0 to 3.1.0
+All items resolved. No pending upgrades.
 
 ## Skills
 

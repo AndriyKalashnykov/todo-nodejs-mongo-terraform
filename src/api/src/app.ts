@@ -1,7 +1,8 @@
 import express, { Express } from "express";
 import swaggerUI from "swagger-ui-express";
 import cors from "cors";
-import yaml from "yamljs";
+import yaml from "js-yaml";
+import fs from "fs";
 import { getConfig } from "./config";
 import lists from "./routes/lists";
 import items from "./routes/items";
@@ -59,7 +60,7 @@ export const createApp = async (): Promise<Express> => {
     app.use("/lists", lists);
 
     // Swagger UI
-    const swaggerDocument = yaml.load("./openapi.yaml");
+    const swaggerDocument = yaml.load(fs.readFileSync("./openapi.yaml", "utf8")) as Record<string, unknown>;
     app.use("/", swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 
     return app;

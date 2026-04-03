@@ -36,11 +36,15 @@ deps:
 		curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v$(NVM_VERSION)/install.sh | bash; \
 		$(call nvm-exec,nvm install $(NODE_VERSION)); \
 	}
+	@command -v pnpm >/dev/null 2>&1 || { \
+		echo "Installing pnpm via corepack..."; \
+		corepack enable pnpm; \
+	}
 
 #deps-check: @ Show installed tool versions
 deps-check:
 	@printf "  %-16s " "node:"; command -v node >/dev/null 2>&1 && node --version || echo "NOT installed"
-	@printf "  %-16s " "npm:"; command -v npm >/dev/null 2>&1 && npm --version || echo "NOT installed"
+	@printf "  %-16s " "pnpm:"; command -v pnpm >/dev/null 2>&1 && pnpm --version || echo "NOT installed"
 	@printf "  %-16s " "docker:"; command -v docker >/dev/null 2>&1 && docker --version || echo "NOT installed"
 	@printf "  %-16s " "hadolint:"; command -v hadolint >/dev/null 2>&1 && hadolint --version || echo "NOT installed"
 	@printf "  %-16s " "act:"; command -v act >/dev/null 2>&1 && act --version || echo "NOT installed"
@@ -59,11 +63,11 @@ deps-hadolint:
 		rm -f /tmp/hadolint; \
 	}
 
-#install: @ Install npm dependencies for all packages
+#install: @ Install pnpm dependencies for all packages
 install: deps
-	@cd $(API_DIR) && npm ci
-	@cd $(WEB_DIR) && npm ci
-	@cd $(TEST_DIR) && npm ci
+	@cd $(API_DIR) && pnpm install --frozen-lockfile
+	@cd $(WEB_DIR) && pnpm install --frozen-lockfile
+	@cd $(TEST_DIR) && pnpm install --frozen-lockfile
 
 #clean: @ Remove build artifacts
 clean:
@@ -74,9 +78,9 @@ clean:
 #lint: @ Lint all code and Dockerfiles
 lint: deps deps-hadolint
 	@echo "=== Lint API ==="
-	@cd $(API_DIR) && npm ci --silent && npm run lint
+	@cd $(API_DIR) && pnpm install && pnpm run lint
 	@echo "=== Lint Web ==="
-	@cd $(WEB_DIR) && npm ci --silent && npm run lint
+	@cd $(WEB_DIR) && pnpm install && pnpm run lint
 	@echo "=== Lint Dockerfiles ==="
 	@hadolint $(API_DIR)/Dockerfile
 	@hadolint $(WEB_DIR)/Dockerfile
@@ -84,23 +88,23 @@ lint: deps deps-hadolint
 #build: @ Build API and Web
 build: deps
 	@echo "=== Build API ==="
-	@cd $(API_DIR) && npm ci --silent && npm run build
+	@cd $(API_DIR) && pnpm install && pnpm run build
 	@echo "=== Build Web ==="
-	@cd $(WEB_DIR) && npm ci --silent && npm run build
+	@cd $(WEB_DIR) && pnpm install && pnpm run build
 
 #test: @ Run API tests (requires MongoDB - use compose-up first)
 test: deps
-	@cd $(API_DIR) && npm ci --silent && npm test
+	@cd $(API_DIR) && pnpm install && pnpm test
 
 #e2e: @ Run Playwright end-to-end tests
 e2e: deps
-	@cd $(TEST_DIR) && npm ci --silent && npx playwright install --with-deps && npx playwright test
+	@cd $(TEST_DIR) && pnpm install && pnpm exec playwright install --with-deps && pnpm exec playwright test
 
 #run: @ Start API and Web locally (API on :3100, Web on :3000)
 run: deps
 	@echo "Starting API on http://localhost:3100 and Web on http://localhost:3000"
-	@cd $(API_DIR) && npm ci --silent && npm start &
-	@cd $(WEB_DIR) && npm ci --silent && npm run dev
+	@cd $(API_DIR) && pnpm install && pnpm start &
+	@cd $(WEB_DIR) && pnpm install && pnpm run dev
 
 #ci: @ Run full local CI pipeline (lint, build)
 ci: deps lint build
@@ -150,7 +154,7 @@ compose-logs:
 
 #renovate-validate: @ Validate Renovate configuration
 renovate-validate: deps
-	@npx --yes renovate --platform=local
+	@pnpm dlx renovate --platform=local
 
 #release: @ Create and push a new tag
 release:

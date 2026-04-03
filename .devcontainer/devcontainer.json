@@ -1,6 +1,6 @@
 {
     "name": "Azure Developer CLI",
-    "image": "mcr.microsoft.com/devcontainers/javascript-node:24-bullseye",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:24-bookworm",
     "features": {
         "ghcr.io/devcontainers/features/azure-cli:1": {
         },

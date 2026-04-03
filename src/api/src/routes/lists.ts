@@ -81,7 +81,7 @@ router.put("/:listId", async (req: Request<TodoListPathParams, unknown, TodoList
 
         await TodoListModel.validate(list);
         const updated = await TodoListModel
-            .findOneAndUpdate({ _id: list.id }, list, { new: true })
+            .findOneAndUpdate({ _id: list.id }, list, { returnDocument: "after" })
             .orFail()
             .exec();
 

@@ -1,7 +1,6 @@
 import { ReactPlugin } from "@microsoft/applicationinsights-react-js";
 import { ApplicationInsights, Snippet, ITelemetryItem } from "@microsoft/applicationinsights-web";
 import { DistributedTracingModes } from "@microsoft/applicationinsights-common";
-import { createBrowserHistory } from 'history'
 import config from "../config";
 
 const plugin = new ReactPlugin();
@@ -9,7 +8,6 @@ let applicationInsights: ApplicationInsights;
 export const reactPlugin = plugin;
 
 export const getApplicationInsights = (): ApplicationInsights => {
-    const browserHistory = createBrowserHistory({ window: window });
     if (applicationInsights) {
         return applicationInsights;
     }
@@ -18,11 +16,9 @@ export const getApplicationInsights = (): ApplicationInsights => {
         config: {
             connectionString: config.observability.connectionString,
             enableCorsCorrelation: true,
-            distributedTracingMode: DistributedTracingModes.W3C, 
+            enableAutoRouteTracking: true,
+            distributedTracingMode: DistributedTracingModes.W3C,
             extensions: [plugin],
-            extensionConfig: {
-                [plugin.identifier]: { history: browserHistory }
-            }
         }
     }
 

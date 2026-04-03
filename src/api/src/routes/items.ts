@@ -90,7 +90,7 @@ router.put("/:itemId", async (req: Request<TodoItemPathParams, unknown, TodoItem
 
         await TodoItemModel.validate(item);
         const updated = await TodoItemModel
-            .findOneAndUpdate({ _id: item.id }, item, { new: true })
+            .findOneAndUpdate({ _id: item.id }, item, { returnDocument: "after" })
             .orFail()
             .exec();
 
