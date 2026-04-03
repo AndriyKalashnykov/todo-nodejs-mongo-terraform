@@ -56,6 +56,33 @@
       "depNameTemplate": "nvm-sh/nvm",
       "datasourceTemplate": "github-releases",
       "extractVersionTemplate": "^v(?<version>.*)$"
+    },
+    {
+      "customType": "regex",
+      "description": "Track Node.js major version in Makefile",
+      "managerFilePatterns": ["/^Makefile$/"],
+      "matchStrings": ["NODE_VERSION\\s*:=\\s*(?<currentValue>\\d+)\\n"],
+      "depNameTemplate": "node",
+      "datasourceTemplate": "node-version",
+      "versioningTemplate": "node"
+    },
+    {
+      "customType": "regex",
+      "description": "Track pnpm version in GitHub Actions",
+      "managerFilePatterns": ["/^\\.github/workflows/[^/]+\\.yml$/"],
+      "matchStrings": ["uses:\\s*pnpm/action-setup[^\\n]*\\n\\s*with:\\n\\s*version:\\s*(?<currentValue>\\d+)"],
+      "depNameTemplate": "pnpm",
+      "datasourceTemplate": "npm",
+      "versioningTemplate": "npm"
+    },
+    {
+      "customType": "regex",
+      "description": "Track MongoDB service image in GitHub Actions",
+      "managerFilePatterns": ["/^\\.github/workflows/[^/]+\\.yml$/"],
+      "matchStrings": ["image:\\s*mongo:(?<currentValue>[^@\\s]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?"],
+      "depNameTemplate": "mongo",
+      "datasourceTemplate": "docker",
+      "versioningTemplate": "docker"
     }
   ],
   "packageRules": [

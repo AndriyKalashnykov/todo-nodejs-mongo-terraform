@@ -1,9 +1,8 @@
-import { FC, ReactElement, useContext, useEffect, useMemo } from 'react';
+import { FC, ReactElement, Suspense, lazy, useContext, useEffect, useMemo } from 'react';
 import Header from './header';
 import Sidebar from './sidebar';
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import HomePage from '../pages/homePage';
-import { Stack } from '@fluentui/react';
+import { Spinner, SpinnerSize, Stack } from '@fluentui/react';
 import { AppContext } from '../models/applicationState';
 import { TodoContext } from '../components/todoContext';
 import * as itemActions from '../actions/itemActions';
@@ -12,8 +11,10 @@ import { ListActions } from '../actions/listActions';
 import { ItemActions } from '../actions/itemActions';
 import { TodoItem, TodoList } from '../models';
 import { headerStackStyles, mainStackStyles, rootStackStyles, sidebarStackStyles } from '../ux/styles';
-import TodoItemDetailPane from '../components/todoItemDetailPane';
 import { bindActionCreators } from '../actions/actionCreators';
+
+const HomePage = lazy(() => import('../pages/homePage'));
+const TodoItemDetailPane = lazy(() => import('../components/todoItemDetailPane'));
 
 const Layout: FC = (): ReactElement => {
     const navigate = useNavigate();
@@ -61,18 +62,22 @@ const Layout: FC = (): ReactElement => {
                         onListCreate={onListCreated} />
                 </Stack.Item>
                 <Stack.Item grow={1} styles={mainStackStyles}>
-                    <Routes>
-                        <Route path="/lists/:listId/items/:itemId" element={<HomePage />} />
-                        <Route path="/lists/:listId" element={<HomePage />} />
-                        <Route path="/lists" element={<HomePage />} />
-                        <Route path="/" element={<HomePage />} />
-                    </Routes>
+                    <Suspense fallback={<Spinner size={SpinnerSize.large} />}>
+                        <Routes>
+                            <Route path="/lists/:listId/items/:itemId" element={<HomePage />} />
+                            <Route path="/lists/:listId" element={<HomePage />} />
+                            <Route path="/lists" element={<HomePage />} />
+                            <Route path="/" element={<HomePage />} />
+                        </Routes>
+                    </Suspense>
                 </Stack.Item>
                 <Stack.Item styles={sidebarStackStyles}>
-                    <TodoItemDetailPane
-                        item={appContext.state.selectedItem}
-                        onEdit={onItemEdited}
-                        onCancel={onItemEditCancel} />
+                    <Suspense fallback={<Spinner size={SpinnerSize.small} />}>
+                        <TodoItemDetailPane
+                            item={appContext.state.selectedItem}
+                            onEdit={onItemEdited}
+                            onCancel={onItemEditCancel} />
+                    </Suspense>
                 </Stack.Item>
             </Stack>
         </Stack>

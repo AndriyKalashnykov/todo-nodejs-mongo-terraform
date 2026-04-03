@@ -53,5 +53,12 @@
     "supertest": "7.2.2",
     "ts-jest": "^29.4.9",
     "typescript": "^6.0.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@scarf/scarf",
+      "protobufjs",
+      "unrs-resolver"
+    ]
   }
 }

@@ -59,7 +59,7 @@ make ci        # Full local CI pipeline
 
 Last reviewed: 2026-04-03
 
-All items resolved. No pending upgrades.
+- [ ] Monitor `eslint-plugin-react-hooks` for eslint 10 compatible release (v8) — peer dep override in place
 
 ## Skills
 

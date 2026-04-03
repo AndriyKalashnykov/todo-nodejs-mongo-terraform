@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
       - name: Install pnpm
-        uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa # v4
+        uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v5
         with:
           version: 10
 
@@ -50,7 +50,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
       - name: Install pnpm
-        uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa # v4
+        uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v5
         with:
           version: 10
 
@@ -71,7 +71,7 @@ jobs:
     timeout-minutes: 15
     services:
       mongo:
-        image: mongo:8
+        image: mongo:8@sha256:eea8506335198f8b359865b32004036310854a935fbd317083817c614152818f
         ports:
           - 27017:27017
         options: >-
@@ -85,7 +85,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
       - name: Install pnpm
-        uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa # v4
+        uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v5
         with:
           version: 10
 
@@ -99,6 +99,7 @@ jobs:
         env:
           AZURE_COSMOS_CONNECTION_STRING: "mongodb://localhost:27017"
           AZURE_COSMOS_DATABASE_NAME: "Todo"
+          APPLICATIONINSIGHTS_CONNECTION_STRING: "InstrumentationKey=00000000-0000-0000-0000-000000000000;IngestionEndpoint=https://localhost"
 
   docker:
     if: ${{ !github.event.act }}
@@ -147,7 +148,7 @@ jobs:
         uses: hashicorp/setup-terraform@5e8dbf3c6d9deaf4193ca7a8fb23f2ac83bb6c85 # v4
 
       - name: Install pnpm
-        uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa # v4
+        uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v5
         with:
           version: 10
 
