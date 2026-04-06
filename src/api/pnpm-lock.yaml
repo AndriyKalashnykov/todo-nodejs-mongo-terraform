@@ -61,7 +61,7 @@ importers:
         specifier: 30.0.0
         version: 30.0.0
       '@types/js-yaml':
-        specifier: ^4.0.9
+        specifier: 4.0.9
         version: 4.0.9
       '@types/supertest':
         specifier: 7.2.0
