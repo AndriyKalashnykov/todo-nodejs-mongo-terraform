@@ -2,6 +2,9 @@ FROM node:24-alpine@sha256:01743339035a5c3c11a373cd7c83aeab6ed1457b55da6a69e014a
 
 WORKDIR /app
 
+# corepack reads the pnpm version from package.json's "packageManager" field;
+# the prompt guard lets it provision that version non-interactively.
+ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
 RUN corepack enable pnpm
 
 COPY package.json pnpm-lock.yaml ./
@@ -14,6 +17,9 @@ FROM node:24-alpine@sha256:01743339035a5c3c11a373cd7c83aeab6ed1457b55da6a69e014a
 
 WORKDIR /app
 
+# corepack reads the pnpm version from package.json's "packageManager" field;
+# the prompt guard lets it provision that version non-interactively.
+ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
 RUN corepack enable pnpm
 
 COPY package.json pnpm-lock.yaml ./
